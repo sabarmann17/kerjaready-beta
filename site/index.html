@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KERJAREADY Beta</title>
-<meta name="description" content="KERJAREADY membantu kamu menyusun CV dari pengalaman nyata dan memeriksanya per syarat lowongan. Unduh APK beta untuk Android.">
+<meta name="description" content="AI yang menganalisis CV-mu terhadap lowongan, menunjukkan buktinya, dan memberi rekomendasi perbaikan, tanpa perlu menulis prompt. Unduh APK beta untuk Android.">
 <meta property="og:title" content="KERJAREADY Beta">
-<meta property="og:description" content="Siapkan CV untuk lowongan yang kamu incar. Beta tertutup untuk 10 orang pertama.">
+<meta property="og:description" content="Asisten AI untuk CV yang siap bersaing. Akses beta terbatas untuk 10 penguji pertama.">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/og.png">
 <meta name="theme-color" content="#F7F9FC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@ a{color:var(--blue)}
 .hero-copy{padding-bottom:64px;align-self:center}
 .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--navy)}
 .pill i{width:8px;height:8px;border-radius:50%;background:var(--teal);display:block}
-h1{font:700 clamp(40px,5vw,64px)/1.08 var(--sans);letter-spacing:-.025em;color:var(--navy);margin:22px 0 22px;max-width:14ch}
+h1{font:700 clamp(40px,5vw,64px)/1.08 var(--sans);letter-spacing:-.025em;color:var(--navy);margin:22px 0 22px;max-width:16ch}
 .lede{font-size:19px;line-height:1.6;color:#3A4257;max-width:46ch;margin:0 0 32px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .fine{font-size:14px;color:var(--muted);margin:16px 0 0}
@@ -117,7 +117,7 @@ h2{font:700 clamp(30px,3.4vw,44px)/1.15 var(--sans);letter-spacing:-.03em;color:
 
 /* compare */
 .compare{margin-top:48px;border:1px solid var(--line);border-radius:28px;background:var(--card);overflow:hidden}
-.crow{display:grid;grid-template-columns:.8fr 1fr 1.2fr;border-top:1px solid var(--line)}
+.crow{display:grid;grid-template-columns:.85fr 1fr 1fr 1.25fr;border-top:1px solid var(--line)}
 .crow:first-child{border-top:0}
 .crow>div{padding:20px 24px;font-size:16px;line-height:1.55}
 .crow .k{font-weight:600;color:var(--navy)}
@@ -226,7 +226,10 @@ footer a:hover{color:var(--blue)}
   .crow{grid-template-columns:1fr}
   .crow>div{padding:14px 18px}
   .crow .k{padding-bottom:0}
-  .crow .them::before{content:"Umumnya: ";font-weight:600}
+  .crow .them{padding-top:4px;padding-bottom:4px}
+  .crow .them::before{content:attr(data-l) ": ";font-weight:600}
+  .crow .k{padding-bottom:6px}
+  .crow .us{margin-top:10px}
   .allf{grid-template-columns:1fr}
   .final{padding:52px 22px;border-radius:28px;margin-top:80px}
   .story p{font-size:17px}
@@ -240,16 +243,16 @@ footer a:hover{color:var(--blue)}
     <a class="link" href="#beda">Bedanya</a>
     <a class="link" href="#fitur">Fitur</a>
     <a class="link" href="#pasang">Cara pasang</a>
-    <a class="link" href="#tanya">Tanya jawab</a>
+    <a class="link" href="#tanya">Pertanyaan umum</a>
     <a class="btn btn-primary btn-sm" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">Unduh APK</a>
   </header>
 
   <main>
   <div class="hero">
     <div class="hero-copy">
-      <span class="pill"><i></i>Beta tertutup untuk 10 orang pertama</span>
-      <h1>Siapkan CV untuk lowongan yang kamu incar.</h1>
-      <p class="lede">KERJAREADY membantu kamu menyusun CV dari pengalaman nyata, lalu memeriksanya per syarat lowongan. Setiap temuan disertai kutipan dari CV-mu, jadi kamu tahu persis apa yang sudah kuat dan apa yang perlu ditambah.</p>
+      <span class="pill"><i></i>Akses beta terbatas untuk 10 penguji pertama</span>
+      <h1>Asisten AI untuk CV yang siap bersaing.</h1>
+      <p class="lede">KERJAREADY menganalisis CV-mu terhadap lowongan yang kamu incar, menunjukkan bukti untuk setiap syarat, dan memberikan rekomendasi perbaikan yang bisa langsung diterapkan. Tanpa perlu menulis prompt.</p>
       <div class="cta">
         <a class="btn btn-primary" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
@@ -260,7 +263,7 @@ footer a:hover{color:var(--blue)}
       <p class="fine">Versi 0.7.2 untuk Android 7.0 ke atas, ukuran 61 MB. File diunduh langsung dari GitHub.</p>
       <a class="maker" href="#pembuat">
         <img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/halozharr.webp" alt="" width="44" height="44">
-        <span><b>Dibuat oleh halozharr</b>Baca kenapa aplikasi ini dibuat</span>
+        <span><b>Dibuat oleh halozharr</b>Kisah di balik KERJAREADY</span>
       </a>
     </div>
     <div class="stage" aria-hidden="true">
@@ -284,30 +287,31 @@ footer a:hover{color:var(--blue)}
   </div>
 
   <section id="beda">
-    <h2>Apa bedanya dengan pembuat CV lain</h2>
-    <p class="intro">KERJAREADY dibuat dengan cara kerja HR: setiap penilaian harus ada buktinya, dan keputusan akhir tetap di tanganmu.</p>
+    <h2>Lebih dari template. Lebih mudah dari AI chat.</h2>
+    <p class="intro">Situs template CV hanya menyediakan format. AI chat seperti ChatGPT memang bisa membantu, tetapi hasilnya bergantung pada seberapa baik kamu menyusun prompt. KERJAREADY menghadirkan AI yang dirancang khusus untuk menilai CV terhadap lowongan, sehingga kamu cukup fokus pada persiapan karier.</p>
     <div class="compare">
-      <div class="crow chead"><div></div><div>Yang umum ditemui</div><div class="us">KERJAREADY</div></div>
-      <div class="crow"><div class="k">Cara menilai CV</div><div class="them">Skor ATS dalam persen yang terdengar pasti.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Dinilai per syarat lowongan, dengan kutipan dari CV-mu sebagai bukti. Tanpa janji lolos ATS.</span></div></div>
-      <div class="crow"><div class="k">Saat AI menulis</div><div class="them">Menulis ulang sekaligus, kadang menambah hal yang tidak pernah kamu lakukan.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Hanya memakai data yang kamu isi. Kalau ada yang kurang, AI bertanya dulu.</span></div></div>
-      <div class="crow"><div class="k">Saat ada perubahan</div><div class="them">Teks lama langsung diganti.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Tampil sebelum dan sesudah. Kamu terima atau tolak satu per satu, versi lama tetap tersimpan.</span></div></div>
-      <div class="crow"><div class="k">Pengalaman yang dihitung</div><div class="them">Berfokus pada pengalaman kerja formal.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Organisasi, magang, proyek kuliah, freelance, dan kegiatan relawan ikut dihitung.</span></div></div>
-      <div class="crow"><div class="k">Data pribadi</div><div class="them">Seluruh isi CV ikut dikirim ke AI.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Untuk CV dari aplikasi, nama, kontak, foto, dan tautan tidak dikirim ke AI.</span></div></div>
+      <div class="crow chead"><div></div><div>Situs template CV</div><div>AI chat umum</div><div class="us">KERJAREADY</div></div>
+      <div class="crow"><div class="k">Yang kamu dapat</div><div class="them" data-l="Situs template CV">Template CV siap isi.</div><div class="them" data-l="AI chat umum">Jawaban sesuai prompt yang kamu tulis.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>CV, analisis per syarat lowongan, dan rekomendasi perbaikan dalam satu aplikasi.</span></div></div>
+      <div class="crow"><div class="k">Analisis CV terhadap lowongan</div><div class="them" data-l="Situs template CV">Tidak tersedia.</div><div class="them" data-l="AI chat umum">Bisa, jika kamu menguasai teknik prompting.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Otomatis. Tempel lowongan, AI mengurai setiap syarat dan mencari buktinya di CV-mu.</span></div></div>
+      <div class="crow"><div class="k">Rekomendasi perbaikan</div><div class="them" data-l="Situs template CV">Tidak tersedia.</div><div class="them" data-l="AI chat umum">Perlu ditanyakan berulang dan disalin manual ke CV.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Dihasilkan dari analisis dan diterapkan langsung ke CV setelah kamu setujui.</span></div></div>
+      <div class="crow"><div class="k">Keahlian prompting</div><div class="them" data-l="Situs template CV">Tidak diperlukan, karena tidak ada AI.</div><div class="them" data-l="AI chat umum">Diperlukan. Kualitas hasil bergantung pada prompt-mu.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Tidak diperlukan. Cukup lengkapi profil dan tempel lowongan.</span></div></div>
+      <div class="crow"><div class="k">Akurasi isi CV</div><div class="them" data-l="Situs template CV">Sepenuhnya manual.</div><div class="them" data-l="AI chat umum">Berisiko menambahkan pengalaman yang tidak kamu miliki jika tidak diarahkan.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>AI hanya menggunakan datamu dan akan bertanya bila ada informasi yang kurang.</span></div></div>
     </div>
   </section>
+
   <section id="fitur">
-    <h2>Dari profil ke CV yang siap dikirim</h2>
-    <p class="intro">Tiga hal yang bisa kamu lakukan di versi beta ini.</p>
+    <h2>Satu aplikasi, dari profil hingga CV siap kirim</h2>
+    <p class="intro">Tiga kemampuan utama yang bisa kamu coba di versi beta.</p>
 
     <div class="feature">
       <div class="shot"><div class="phone"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/pratinjau-cv.webp" alt="Pratinjau CV di aplikasi KERJAREADY dengan contoh data Rina Kartika" loading="lazy" width="390" height="844"></div></div>
       <div>
-        <h3>Susun CV dari profilmu</h3>
-        <p>Isi profil sekali: pendidikan, organisasi, magang, dan proyek kuliah. AI membantu merapikan kalimatnya dari data yang kamu tulis sendiri, tanpa mengarang pengalaman baru.</p>
+        <h3>Susun CV profesional dari profilmu</h3>
+        <p>Lengkapi profil sekali, mulai dari pendidikan, organisasi, magang, hingga proyek kuliah. AI menyempurnakan setiap kalimat berdasarkan data yang kamu tulis, tanpa menambahkan pengalaman yang tidak kamu miliki.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Template yang ramah ATS</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Simpan sebagai PDF atau DOCX</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Beberapa CV untuk lowongan berbeda, satu profil</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Template ramah ATS</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Ekspor ke PDF dan DOCX</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Banyak CV untuk berbagai lowongan, cukup satu profil</li>
         </ul>
       </div>
     </div>
@@ -315,43 +319,43 @@ footer a:hover{color:var(--blue)}
     <div class="feature">
       <div class="shot"><div class="phone"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/pemetaan.webp" alt="Hasil pemetaan kompetensi: syarat lowongan yang ditemukan dan sebagian di CV" loading="lazy" width="390" height="844"></div></div>
       <div>
-        <h3>Periksa CV per syarat lowongan</h3>
-        <p>Tempel deskripsi lowongan, lalu AI memisahkan syarat-syaratnya. Kamu bisa mengoreksi daftar itu dulu sebelum CV dinilai.</p>
-        <p>Hasilnya menunjukkan syarat mana yang sudah terlihat, mana yang baru sebagian, dan mana yang belum ada buktinya, lengkap dengan kutipan dari CV.</p>
+        <h3>Analisis CV per syarat lowongan</h3>
+        <p>Tempel deskripsi lowongan dan AI akan mengurai setiap syaratnya. Kamu bisa meninjau dan mengoreksi daftar tersebut sebelum penilaian dimulai.</p>
+        <p>Hasilnya menunjukkan syarat yang sudah terpenuhi, yang baru sebagian, dan yang belum memiliki bukti, lengkap dengan kutipan langsung dari CV-mu.</p>
       </div>
     </div>
 
     <div class="feature">
       <div class="shot"><div class="phone"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/tinjau-perubahan.webp" alt="Layar tinjau perubahan: perbandingan sebelum dan sesudah dengan tombol Tolak dan Terima" loading="lazy" width="390" height="844"></div></div>
       <div>
-        <h3>Kamu yang memutuskan setiap perubahan</h3>
-        <p>Rekomendasi dari analisis muncul sebagai perbandingan sebelum dan sesudah. Hanya perubahan yang kamu terima yang masuk ke CV.</p>
-        <p>Kalau AI butuh informasi yang belum ada, ia akan bertanya, bukan menebak.</p>
+        <h3>Rekomendasi yang tetap di bawah kendalimu</h3>
+        <p>Setiap rekomendasi ditampilkan dalam perbandingan sebelum dan sesudah. Hanya perubahan yang kamu setujui yang masuk ke CV.</p>
+        <p>Jika ada informasi yang belum lengkap, AI akan bertanya terlebih dahulu, bukan menebak.</p>
       </div>
     </div>
 
-    <h2 class="sub">Semua fitur di versi beta</h2>
+    <h2 class="sub">Fitur lengkap versi beta</h2>
     <div class="allf">
       <div class="grp"><h3>Profil dan CV Builder</h3><ul><li>Profil karier yang diisi sekali untuk semua CV</li><li>Pendidikan, pengalaman, proyek, keahlian, dan sertifikasi</li><li>Tipe CV: Fresh Graduate, Professional, Internship, Career Transition</li><li>Tiga template: ATS Classic, Professional Modern, Academic</li></ul></div>
       <div class="grp"><h3>Bantuan AI</h3><ul><li>Merapikan kalimat pengalaman</li><li>Membuat ringkasan diri</li><li>AI bertanya kalau informasinya kurang</li><li>Perbandingan sebelum dan sesudah di setiap saran</li></ul></div>
       <div class="grp"><h3>Analisis lowongan</h3><ul><li>Analisis CV dari aplikasi atau file PDF/DOCX</li><li>Tempel lowongan atau ambil dari file DOCX/TXT</li><li>Syarat lowongan bisa dikoreksi sebelum dinilai</li><li>Laporan: kualitas dokumen, relevansi, kekuatan bukti, dan pemetaan kompetensi</li></ul></div>
-      <div class="grp"><h3>Simpan dan kelola</h3><ul><li>Simpan sebagai PDF atau DOCX</li><li>Beberapa CV untuk lowongan berbeda</li><li>Riwayat versi setiap kali CV diperbaiki</li><li>Riwayat aktivitas dan analisis</li></ul></div>
+      <div class="grp"><h3>Simpan dan kelola</h3><ul><li>Ekspor ke PDF dan DOCX</li><li>Beberapa CV untuk lowongan berbeda</li><li>Riwayat versi setiap kali CV diperbaiki</li><li>Riwayat aktivitas dan analisis</li></ul></div>
     </div>
   </section>
 
   <section>
     <div class="beta">
       <div>
-        <h2>Selama masa beta</h2>
-        <p class="intro">Fitur AI memakai kredit. Untuk teman-teman yang ikut mencoba duluan, kreditnya gratis.</p>
+        <h2>Akses beta gratis</h2>
+        <p class="intro">Fitur AI menggunakan sistem kredit. Sebagai penguji awal, kamu mendapatkan kredit gratis selama masa beta.</p>
         <div class="facts">
-          <div class="fact"><b>50 kredit</b><span>tiap bulan untuk 10 penguji pertama, tanpa bayar.</span></div>
-          <div class="fact"><b>3 hari</b><span>masa coba dengan 10 kredit per hari kalau kuota 10 orang sudah penuh.</span></div>
+          <div class="fact"><b>50 kredit</b><span>setiap bulan untuk 10 penguji pertama, tanpa biaya.</span></div>
+          <div class="fact"><b>3 hari</b><span>masa uji coba dengan 10 kredit per hari setelah kuota penguji terpenuhi.</span></div>
         </div>
       </div>
       <div class="costs">
-        <h3>Berapa kredit tiap bantuan AI</h3>
-        <p>Fitur tanpa AI, seperti mengisi profil dan menyimpan PDF, tidak memakai kredit.</p>
+        <h3>Penggunaan kredit per fitur AI</h3>
+        <p>Fitur tanpa AI, seperti mengisi profil dan mengekspor PDF, tidak menggunakan kredit.</p>
         <table>
           <tr><td>Merapikan satu kalimat atau ringkasan</td><td>1 kredit</td></tr>
           <tr><td>Membaca syarat dari deskripsi lowongan</td><td>1 kredit</td></tr>
@@ -364,17 +368,17 @@ footer a:hover{color:var(--blue)}
   </section>
 
   <section id="pasang">
-    <h2>Cara memasang di HP Android</h2>
-    <p class="intro">KERJAREADY belum ada di Play Store, jadi dipasang dari file APK. Prosesnya sekitar dua menit.</p>
+    <h2>Pasang dalam dua menit</h2>
+    <p class="intro">KERJAREADY belum tersedia di Play Store, sehingga pemasangan dilakukan melalui file APK resmi.</p>
     <ol class="steps">
-      <li><h3>Unduh dari HP</h3><p>Buka halaman ini di HP Android, lalu ketuk tombol Unduh APK.</p></li>
-      <li><h3>Buka file APK</h3><p>Ketuk file kerjaready-beta.apk di notifikasi unduhan atau di folder Download.</p></li>
-      <li><h3>Izinkan pemasangan</h3><p>Kalau HP meminta izin "sumber tidak dikenal", izinkan untuk browser atau File Manager.</p></li>
-      <li><h3>Masuk dengan email</h3><p>Buka aplikasinya, masukkan email, lalu ketik kode yang dikirim ke inbox-mu.</p></li>
+      <li><h3>Unduh dari HP</h3><p>Buka halaman ini di HP Android, lalu ketuk Unduh APK.</p></li>
+      <li><h3>Buka file APK</h3><p>Ketuk kerjaready-beta.apk dari notifikasi unduhan atau folder Download.</p></li>
+      <li><h3>Izinkan pemasangan</h3><p>Jika muncul izin "sumber tidak dikenal", izinkan untuk browser atau File Manager.</p></li>
+      <li><h3>Masuk dengan email</h3><p>Buka aplikasi, masukkan email, lalu ketik kode verifikasi yang dikirim ke inbox-mu.</p></li>
     </ol>
     <div class="note">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.4 17.6A2 2 0 0 0 4.1 20.6h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-      <span>Kalau Google Play Protect bertanya, pilih <b>Detail lainnya</b> lalu <b>Tetap instal</b>. Pernah memasang KERJAREADY dari file yang dikirim lewat chat? Hapus versi itu dulu, karena versi ini memakai kunci tanda tangan yang baru.</span>
+      <span>Jika Google Play Protect menampilkan peringatan, pilih <b>Detail lainnya</b> lalu <b>Tetap instal</b>. Jika sebelumnya kamu memasang KERJAREADY dari file yang dikirim lewat chat, hapus versi tersebut terlebih dahulu karena versi ini menggunakan kunci tanda tangan baru.</span>
     </div>
   </section>
 
@@ -382,11 +386,11 @@ footer a:hover{color:var(--blue)}
     <div class="about">
       <div class="portrait"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/halozharr.webp" alt="Foto halozharr, pembuat KERJAREADY" loading="lazy" width="513" height="749"></div>
       <div class="story">
-        <h2>Kenapa aku bikin KERJAREADY</h2>
-        <p>Banyak yang baru lulus sebenarnya punya bekal bagus: organisasi, magang, proyek kampus. Masalahnya, mereka bingung cara menuliskannya di CV. Nggak tahu skill mana yang dicari lowongan, nggak paham ATS, lalu akhirnya melamar dengan rasa kurang percaya diri.</p>
-        <p>KERJAREADY aku bikin untuk membantu persiapan itu. Kamu bisa bikin CV yang rapi dari profilmu sendiri, mencocokkannya dengan lowongan yang kamu incar, dan melihat bagian mana yang sudah kuat dan mana yang masih kurang.</p>
-        <p>Ini masih versi beta. Kamu salah satu dari 10 orang pertama yang mencoba, jadi masukanmu akan langsung membentuk versi berikutnya.</p>
-        <div class="sign"><b>halozharr</b>Developer KERJAREADY</div>
+        <h2>Kenapa KERJAREADY</h2>
+        <p>Banyak lulusan baru sebenarnya memiliki bekal yang kuat: pengalaman organisasi, magang, dan proyek kampus. Tantangannya ada pada cara menuliskannya di CV, memahami skill yang dicari perusahaan, dan menghadapi sistem ATS. Akibatnya, banyak yang melamar dengan rasa kurang percaya diri.</p>
+        <p>KERJAREADY hadir untuk membantu persiapan itu. Didukung teknologi AI, kamu bisa menyusun CV yang rapi dari profilmu sendiri, mencocokkannya dengan lowongan incaranmu, dan melihat bagian mana yang sudah kuat serta mana yang perlu ditingkatkan.</p>
+        <p>KERJAREADY masih dalam tahap beta. Sebagai salah satu dari 10 penguji pertama, masukanmu akan langsung membentuk versi berikutnya.</p>
+        <div class="sign"><b>halozharr</b>Developer dan owner www.kerjain.work</div>
       </div>
     </div>
   </section>
@@ -394,13 +398,13 @@ footer a:hover{color:var(--blue)}
   <section id="tanya">
     <div class="faq">
       <div>
-        <h2>Tanya jawab</h2>
-        <p class="intro">Ada pertanyaan lain? Kirim email ke <a href="mailto:halo@kerjain.work">halo@kerjain.work</a>.</p>
+        <h2>Pertanyaan umum</h2>
+        <p class="intro">Masih ada pertanyaan? Hubungi kami di <a href="mailto:halo@kerjain.work">halo@kerjain.work</a>.</p>
       </div>
       <div>
         <details>
           <summary>Kenapa HP memberi peringatan saat memasang?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Android selalu memberi peringatan untuk aplikasi yang dipasang di luar Play Store. KERJAREADY sedang diuji sebelum masuk Play Store, jadi peringatan ini wajar.</p>
+          <p>Android selalu menampilkan peringatan untuk aplikasi yang dipasang di luar Play Store. KERJAREADY sedang dalam tahap uji sebelum dirilis di Play Store, sehingga peringatan ini wajar.</p>
         </details>
         <details>
           <summary>Bagaimana memastikan filenya asli?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
@@ -427,8 +431,8 @@ footer a:hover{color:var(--blue)}
   </section>
 
   <div class="final">
-    <h2>Coba sekarang, lalu kabari aku hasilnya</h2>
-    <p class="intro">Ceritakan apa yang membingungkan atau yang kurang. Semua masukan dibaca.</p>
+    <h2>Coba sekarang<br>dan berikan feedback</h2>
+    <p class="intro">Masukanmu sangat berarti.</p>
     <div class="cta">
       <a class="btn btn-primary" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
