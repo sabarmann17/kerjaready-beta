@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KERJAREADY Beta</title>
+<meta name="description" content="KERJAREADY membantu kamu menyusun CV dari pengalaman nyata dan memeriksanya per syarat lowongan. Unduh APK beta untuk Android.">
+<meta property="og:title" content="KERJAREADY Beta">
+<meta property="og:description" content="Siapkan CV untuk lowongan yang kamu incar. Beta tertutup untuk 10 orang pertama.">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/og.png">
+<meta name="theme-color" content="#F7F9FC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F9FC;
+  --tint:#EAF0FE;
+  --tint-deep:#A8BBF3;
+  --navy:#14213D;
+  --blue:#3157D5;
+  --teal:#1E9C8D;
+  --amber:#B86A12;
+  --ink:#172033;
+  --muted:#5E6679;
+  --line:#E2E7F1;
+  --card:#FFFFFF;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* header */
+.top{display:flex;align-items:center;gap:16px;padding:20px 0}
+.mark{font:700 18px/1 var(--sans);letter-spacing:.06em;color:var(--navy);text-decoration:none;margin-right:auto}
+.top a.link{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.top a.link:hover{color:var(--blue)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font:600 16px/1 var(--sans);text-decoration:none;padding:16px 26px;transition:transform .15s ease, background .15s ease}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:#2547BD}
+.btn-ghost{color:var(--navy);box-shadow:inset 0 0 0 1.5px rgba(20,33,61,.25)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn-sm{padding:11px 18px;font-size:14px}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* hero */
+.hero{background:var(--tint);border:1px solid #DCE5FB;border-radius:36px;padding:64px 56px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;overflow:hidden;position:relative}
+.hero-copy{padding-bottom:64px;align-self:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--navy)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--teal);display:block}
+h1{font:700 clamp(40px,5vw,64px)/1.08 var(--sans);letter-spacing:-.025em;color:var(--navy);margin:22px 0 22px;max-width:14ch}
+.lede{font-size:19px;line-height:1.6;color:#3A4257;max-width:46ch;margin:0 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.fine{font-size:14px;color:var(--muted);margin:16px 0 0}
+.maker{display:inline-flex;align-items:center;gap:12px;margin-top:36px;text-decoration:none;color:var(--ink)}
+.maker img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 18%;background:#fff;border:2px solid #fff}
+.maker span{font-size:14px;line-height:1.35;color:var(--muted)}
+.maker b{display:block;color:var(--navy);font-weight:600}
+
+.stage{position:relative;min-height:600px;display:flex;justify-content:center;align-items:flex-end}
+.phone{width:300px;aspect-ratio:390/844;background:var(--navy);border-radius:46px;padding:10px;box-shadow:0 40px 80px -30px rgba(20,33,61,.45)}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:37px;background:#F7F8FC}
+.stage .phone{width:320px;margin-bottom:-120px}
+
+.ev{position:absolute;background:var(--card);border-radius:20px;padding:14px 16px;box-shadow:0 18px 40px -18px rgba(20,33,61,.35);font-size:14px;line-height:1.4;width:250px}
+.ev .tag{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:3px 9px;margin-bottom:8px}
+.tag.found{background:#DDF3EF;color:var(--teal)}
+.tag.part{background:#FBEBD6;color:var(--amber)}
+.ev strong{display:block;font-weight:600;color:var(--navy);margin-bottom:6px}
+.ev q{font-size:14px;color:#3A4257;quotes:"\201C" "\201D"}
+.hl{background:linear-gradient(transparent 58%, #CFDDFF 58%) no-repeat;background-size:100% 100%}
+.ev1{left:-10px;top:36px}
+.ev2{right:-6px;top:250px;width:220px}
+.ev3{left:6px;top:450px;width:236px}
+.score{display:flex;gap:6px;margin-top:8px}
+.score i{flex:1;height:8px;border-radius:4px;background:var(--teal)}
+.score i.half{background:linear-gradient(90deg,var(--amber) 50%,#E6EBF5 50%)}
+.ev2 .big{font:700 26px/1 var(--sans);letter-spacing:-.02em;color:var(--navy)}
+
+/* load sequence */
+@media (prefers-reduced-motion:no-preference){
+  .stage .phone{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+  .ev{animation:pop .55s cubic-bezier(.2,.9,.3,1.2) both}
+  .ev1{animation-delay:.7s}.ev2{animation-delay:1.25s}.ev3{animation-delay:1.8s}
+  .ev1 .hl{background-size:0% 100%;animation:mark .7s ease-out 1.05s forwards}
+  .score i{transform:scaleX(0);transform-origin:left;animation:fill .35s ease-out forwards}
+  .score i:nth-child(1){animation-delay:1.5s}.score i:nth-child(2){animation-delay:1.6s}.score i:nth-child(3){animation-delay:1.7s}.score i:nth-child(4){animation-delay:1.8s}.score i:nth-child(5){animation-delay:1.9s}
+}
+@keyframes rise{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes mark{to{background-size:100% 100%}}
+@keyframes fill{to{transform:scaleX(1)}}
+
+/* sections */
+section{padding:112px 0 0}
+h2.sub{margin-top:104px}
+h2{font:700 clamp(30px,3.4vw,44px)/1.15 var(--sans);letter-spacing:-.03em;color:var(--navy);margin:0 0 18px;max-width:20ch}
+.intro{color:var(--muted);font-size:18px;max-width:56ch;margin:0}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:72px}
+.feature:nth-of-type(even) .shot{order:2}
+.shot{background:var(--tint);border:1px solid #DCE5FB;border-radius:32px;display:flex;justify-content:center;padding:48px 24px 0;overflow:hidden;height:520px}
+.shot .phone{width:280px;flex:none}
+.feature h3{font:700 24px/1.25 var(--sans);letter-spacing:-.02em;color:var(--navy);margin:0 0 14px}
+.feature p{margin:0 0 14px;color:#3A4257;max-width:44ch}
+.feature ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.feature li{display:flex;gap:10px;font-size:16px;color:var(--ink)}
+.feature li svg{flex:none;width:20px;height:20px;margin-top:3px;color:var(--teal)}
+
+/* compare */
+.compare{margin-top:48px;border:1px solid var(--line);border-radius:28px;background:var(--card);overflow:hidden}
+.crow{display:grid;grid-template-columns:.8fr 1fr 1.2fr;border-top:1px solid var(--line)}
+.crow:first-child{border-top:0}
+.crow>div{padding:20px 24px;font-size:16px;line-height:1.55}
+.crow .k{font-weight:600;color:var(--navy)}
+.crow .them{color:var(--muted)}
+.crow .us{background:#F3F6FE;color:var(--ink);display:flex;gap:10px}
+.crow .us svg{flex:none;width:20px;height:20px;margin-top:2px;color:var(--blue)}
+.chead>div{padding:16px 24px;font-size:14px;font-weight:600;color:var(--muted)}
+.chead .us{color:var(--blue)}
+/* all features */
+.allf{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.grp{border-top:2px solid var(--blue);padding-top:20px}
+.grp h3{font:700 18px/1.3 var(--sans);color:var(--navy);margin:0 0 14px}
+.grp ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.grp li{font-size:15px;line-height:1.5;color:#3A4257;padding-left:16px;position:relative}
+.grp li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+
+/* beta panel */
+.beta{background:var(--navy);color:#E9EDF7;border-radius:36px;padding:64px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.beta h2{color:#fff}
+.beta .intro{color:#B9C2D8}
+.facts{display:grid;gap:20px;margin-top:32px}
+.fact{border-top:1px solid rgba(255,255,255,.14);padding-top:18px}
+.fact b{font:700 34px/1 var(--sans);letter-spacing:-.03em;color:#fff;display:block;margin-bottom:6px}
+.fact span{color:#B9C2D8;font-size:16px}
+.costs{background:rgba(255,255,255,.06);border-radius:24px;padding:28px}
+.costs h3{font:700 19px/1.3 var(--sans);color:#fff;margin:0 0 6px}
+.costs p{color:#B9C2D8;font-size:15px;margin:0 0 18px}
+.costs table{width:100%;border-collapse:collapse;font-size:15px}
+.costs td{padding:12px 0;border-top:1px solid rgba(255,255,255,.1)}
+.costs td:last-child{text-align:right;color:#fff;font-weight:600;white-space:nowrap}
+
+/* install */
+.steps{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--card);border-radius:24px;padding:26px 24px 28px;border:1px solid var(--line)}
+.steps li::before{content:counter(s);font:700 32px/1 var(--sans);color:var(--blue);display:block;margin-bottom:18px}
+.steps h3{font:600 17px/1.3 var(--sans);margin:0 0 8px;color:var(--navy)}
+.steps p{margin:0;font-size:15px;color:var(--muted)}
+.note{margin-top:20px;background:#FFF4E5;border-radius:20px;padding:18px 22px;font-size:15px;color:#5B4320;display:flex;gap:12px}
+.note svg{flex:none;width:20px;height:20px;margin-top:2px}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
+.portrait{background:var(--tint);border-radius:36px;overflow:hidden;aspect-ratio:4/5}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;mix-blend-mode:multiply}
+.story p{font:400 18px/1.75 var(--sans);color:#2A3247;margin:0 0 20px;max-width:58ch}
+.sign{margin-top:28px;font-size:15px;color:var(--muted)}
+.sign b{display:block;font:700 22px/1.2 var(--sans);letter-spacing:-.01em;color:var(--navy);margin-bottom:4px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+details{border-top:1px solid var(--line);padding:6px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 0;font-weight:600;font-size:18px;color:var(--navy)}
+summary::-webkit-details-marker{display:none}
+summary svg{flex:none;width:22px;height:22px;transition:transform .2s ease}
+details[open] summary svg{transform:rotate(45deg)}
+details p{margin:0 0 18px;color:#3A4257;max-width:62ch}
+code{font-size:13px;background:#EEF1F7;padding:3px 7px;border-radius:6px;word-break:break-all}
+
+/* final cta + footer */
+.final{background:var(--tint);border:1px solid #DCE5FB;border-radius:36px;padding:72px 56px;text-align:center;margin-top:112px}
+.final h2{margin:0 auto 14px;max-width:18ch}
+.final .intro{margin:0 auto 32px}
+.final .cta{justify-content:center}
+footer{padding:40px 0 56px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;font-size:14px;color:var(--muted)}
+footer .mark{font-size:15px;margin-right:auto}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--blue)}
+
+/* responsive */
+@media (max-width:1020px){
+  .hero{grid-template-columns:1fr;padding:44px 32px 0}
+  .hero-copy{padding-bottom:8px}
+  .stage{min-height:560px}
+  .steps{grid-template-columns:1fr 1fr}
+  .allf{grid-template-columns:1fr 1fr;gap:32px 24px}
+  .beta,.about,.faq{grid-template-columns:1fr;gap:40px}
+  .portrait{max-width:420px}
+}
+@media (max-width:720px){
+  .wrap{padding:0 16px}
+  body{font-size:16px}
+  .top .link{display:none}
+  .hero{border-radius:28px;padding:36px 22px 0}
+  .lede{font-size:17px}
+  .cta .btn{flex:1 1 100%;justify-content:center}
+  .stage{min-height:500px;margin:0 -10px}
+  .stage .phone{width:250px;margin-bottom:-110px}
+  .ev{width:200px;padding:12px 13px;font-size:13px;border-radius:16px}
+  .ev q{font-size:14px}
+  .ev1{left:0;top:20px}
+  .ev2{right:0;top:200px;width:168px}
+  .ev2 .big{font-size:22px}
+  .ev3{left:0;top:330px;width:196px}
+  section{padding-top:80px}
+  .feature{grid-template-columns:1fr;gap:28px;margin-top:52px}
+  .feature:nth-of-type(even) .shot{order:0}
+  .shot{height:440px;border-radius:28px;padding-top:36px}
+  .shot .phone{width:240px}
+  .beta{padding:44px 24px;border-radius:28px}
+  .steps{grid-template-columns:1fr;gap:12px}
+  .steps li{display:grid;grid-template-columns:44px 1fr;column-gap:12px;padding:20px}
+  .steps li::before{grid-row:span 2;margin:0;font-size:28px}
+  footer{flex-direction:column;align-items:flex-start;gap:10px}
+  .chead{display:none}
+  .crow{grid-template-columns:1fr}
+  .crow>div{padding:14px 18px}
+  .crow .k{padding-bottom:0}
+  .crow .them::before{content:"Umumnya: ";font-weight:600}
+  .allf{grid-template-columns:1fr}
+  .final{padding:52px 22px;border-radius:28px;margin-top:80px}
+  .story p{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#">KERJAREADY</a>
+    <a class="link" href="#beda">Bedanya</a>
+    <a class="link" href="#fitur">Fitur</a>
+    <a class="link" href="#pasang">Cara pasang</a>
+    <a class="link" href="#tanya">Tanya jawab</a>
+    <a class="btn btn-primary btn-sm" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">Unduh APK</a>
+  </header>
+
+  <main>
+  <div class="hero">
+    <div class="hero-copy">
+      <span class="pill"><i></i>Beta tertutup untuk 10 orang pertama</span>
+      <h1>Siapkan CV untuk lowongan yang kamu incar.</h1>
+      <p class="lede">KERJAREADY membantu kamu menyusun CV dari pengalaman nyata, lalu memeriksanya per syarat lowongan. Setiap temuan disertai kutipan dari CV-mu, jadi kamu tahu persis apa yang sudah kuat dan apa yang perlu ditambah.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+          Unduh APK untuk Android
+        </a>
+        <a class="btn btn-ghost" href="#pasang">Lihat cara pasang</a>
+      </div>
+      <p class="fine">Versi 0.7.2 untuk Android 7.0 ke atas, ukuran 61 MB. File diunduh langsung dari GitHub.</p>
+      <a class="maker" href="#pembuat">
+        <img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/halozharr.webp" alt="" width="44" height="44">
+        <span><b>Dibuat oleh halozharr</b>Baca kenapa aplikasi ini dibuat</span>
+      </a>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="phone"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/beranda.webp" alt="" width="390" height="844"></div>
+      <div class="ev ev1">
+        <span class="tag found">Ditemukan</span>
+        <strong>Menguasai Microsoft Excel</strong>
+        <q><span class="hl">Merekap data penjualan mingguan di Excel</span></q>
+      </div>
+      <div class="ev ev2">
+        <span class="big">4 dari 5</span>
+        syarat sudah terlihat jelas di CV
+        <div class="score"><i></i><i></i><i></i><i></i><i class="half"></i></div>
+      </div>
+      <div class="ev ev3">
+        <span class="tag part">Sebagian</span>
+        <strong>Terbiasa membuat laporan penjualan</strong>
+        Ada rekap data, tapi belum disebut sebagai laporan.
+      </div>
+    </div>
+  </div>
+
+  <section id="beda">
+    <h2>Apa bedanya dengan pembuat CV lain</h2>
+    <p class="intro">KERJAREADY dibuat dengan cara kerja HR: setiap penilaian harus ada buktinya, dan keputusan akhir tetap di tanganmu.</p>
+    <div class="compare">
+      <div class="crow chead"><div></div><div>Yang umum ditemui</div><div class="us">KERJAREADY</div></div>
+      <div class="crow"><div class="k">Cara menilai CV</div><div class="them">Skor ATS dalam persen yang terdengar pasti.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Dinilai per syarat lowongan, dengan kutipan dari CV-mu sebagai bukti. Tanpa janji lolos ATS.</span></div></div>
+      <div class="crow"><div class="k">Saat AI menulis</div><div class="them">Menulis ulang sekaligus, kadang menambah hal yang tidak pernah kamu lakukan.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Hanya memakai data yang kamu isi. Kalau ada yang kurang, AI bertanya dulu.</span></div></div>
+      <div class="crow"><div class="k">Saat ada perubahan</div><div class="them">Teks lama langsung diganti.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Tampil sebelum dan sesudah. Kamu terima atau tolak satu per satu, versi lama tetap tersimpan.</span></div></div>
+      <div class="crow"><div class="k">Pengalaman yang dihitung</div><div class="them">Berfokus pada pengalaman kerja formal.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Organisasi, magang, proyek kuliah, freelance, dan kegiatan relawan ikut dihitung.</span></div></div>
+      <div class="crow"><div class="k">Data pribadi</div><div class="them">Seluruh isi CV ikut dikirim ke AI.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Untuk CV dari aplikasi, nama, kontak, foto, dan tautan tidak dikirim ke AI.</span></div></div>
+    </div>
+  </section>
+  <section id="fitur">
+    <h2>Dari profil ke CV yang siap dikirim</h2>
+    <p class="intro">Tiga hal yang bisa kamu lakukan di versi beta ini.</p>
+
+    <div class="feature">
+      <div class="shot"><div class="phone"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/pratinjau-cv.webp" alt="Pratinjau CV di aplikasi KERJAREADY dengan contoh data Rina Kartika" loading="lazy" width="390" height="844"></div></div>
+      <div>
+        <h3>Susun CV dari profilmu</h3>
+        <p>Isi profil sekali: pendidikan, organisasi, magang, dan proyek kuliah. AI membantu merapikan kalimatnya dari data yang kamu tulis sendiri, tanpa mengarang pengalaman baru.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Template yang ramah ATS</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Simpan sebagai PDF atau DOCX</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Beberapa CV untuk lowongan berbeda, satu profil</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="shot"><div class="phone"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/pemetaan.webp" alt="Hasil pemetaan kompetensi: syarat lowongan yang ditemukan dan sebagian di CV" loading="lazy" width="390" height="844"></div></div>
+      <div>
+        <h3>Periksa CV per syarat lowongan</h3>
+        <p>Tempel deskripsi lowongan, lalu AI memisahkan syarat-syaratnya. Kamu bisa mengoreksi daftar itu dulu sebelum CV dinilai.</p>
+        <p>Hasilnya menunjukkan syarat mana yang sudah terlihat, mana yang baru sebagian, dan mana yang belum ada buktinya, lengkap dengan kutipan dari CV.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="shot"><div class="phone"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/tinjau-perubahan.webp" alt="Layar tinjau perubahan: perbandingan sebelum dan sesudah dengan tombol Tolak dan Terima" loading="lazy" width="390" height="844"></div></div>
+      <div>
+        <h3>Kamu yang memutuskan setiap perubahan</h3>
+        <p>Rekomendasi dari analisis muncul sebagai perbandingan sebelum dan sesudah. Hanya perubahan yang kamu terima yang masuk ke CV.</p>
+        <p>Kalau AI butuh informasi yang belum ada, ia akan bertanya, bukan menebak.</p>
+      </div>
+    </div>
+
+    <h2 class="sub">Semua fitur di versi beta</h2>
+    <div class="allf">
+      <div class="grp"><h3>Profil dan CV Builder</h3><ul><li>Profil karier yang diisi sekali untuk semua CV</li><li>Pendidikan, pengalaman, proyek, keahlian, dan sertifikasi</li><li>Tipe CV: Fresh Graduate, Professional, Internship, Career Transition</li><li>Tiga template: ATS Classic, Professional Modern, Academic</li></ul></div>
+      <div class="grp"><h3>Bantuan AI</h3><ul><li>Merapikan kalimat pengalaman</li><li>Membuat ringkasan diri</li><li>AI bertanya kalau informasinya kurang</li><li>Perbandingan sebelum dan sesudah di setiap saran</li></ul></div>
+      <div class="grp"><h3>Analisis lowongan</h3><ul><li>Analisis CV dari aplikasi atau file PDF/DOCX</li><li>Tempel lowongan atau ambil dari file DOCX/TXT</li><li>Syarat lowongan bisa dikoreksi sebelum dinilai</li><li>Laporan: kualitas dokumen, relevansi, kekuatan bukti, dan pemetaan kompetensi</li></ul></div>
+      <div class="grp"><h3>Simpan dan kelola</h3><ul><li>Simpan sebagai PDF atau DOCX</li><li>Beberapa CV untuk lowongan berbeda</li><li>Riwayat versi setiap kali CV diperbaiki</li><li>Riwayat aktivitas dan analisis</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="beta">
+      <div>
+        <h2>Selama masa beta</h2>
+        <p class="intro">Fitur AI memakai kredit. Untuk teman-teman yang ikut mencoba duluan, kreditnya gratis.</p>
+        <div class="facts">
+          <div class="fact"><b>50 kredit</b><span>tiap bulan untuk 10 penguji pertama, tanpa bayar.</span></div>
+          <div class="fact"><b>3 hari</b><span>masa coba dengan 10 kredit per hari kalau kuota 10 orang sudah penuh.</span></div>
+        </div>
+      </div>
+      <div class="costs">
+        <h3>Berapa kredit tiap bantuan AI</h3>
+        <p>Fitur tanpa AI, seperti mengisi profil dan menyimpan PDF, tidak memakai kredit.</p>
+        <table>
+          <tr><td>Merapikan satu kalimat atau ringkasan</td><td>1 kredit</td></tr>
+          <tr><td>Membaca syarat dari deskripsi lowongan</td><td>1 kredit</td></tr>
+          <tr><td>Analisis CV dari aplikasi</td><td>2 kredit</td></tr>
+          <tr><td>Menerapkan rekomendasi ke CV</td><td>2 kredit</td></tr>
+          <tr><td>Analisis file PDF atau DOCX</td><td>3 kredit</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="pasang">
+    <h2>Cara memasang di HP Android</h2>
+    <p class="intro">KERJAREADY belum ada di Play Store, jadi dipasang dari file APK. Prosesnya sekitar dua menit.</p>
+    <ol class="steps">
+      <li><h3>Unduh dari HP</h3><p>Buka halaman ini di HP Android, lalu ketuk tombol Unduh APK.</p></li>
+      <li><h3>Buka file APK</h3><p>Ketuk file kerjaready-beta.apk di notifikasi unduhan atau di folder Download.</p></li>
+      <li><h3>Izinkan pemasangan</h3><p>Kalau HP meminta izin "sumber tidak dikenal", izinkan untuk browser atau File Manager.</p></li>
+      <li><h3>Masuk dengan email</h3><p>Buka aplikasinya, masukkan email, lalu ketik kode yang dikirim ke inbox-mu.</p></li>
+    </ol>
+    <div class="note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.4 17.6A2 2 0 0 0 4.1 20.6h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+      <span>Kalau Google Play Protect bertanya, pilih <b>Detail lainnya</b> lalu <b>Tetap instal</b>. Pernah memasang KERJAREADY dari file yang dikirim lewat chat? Hapus versi itu dulu, karena versi ini memakai kunci tanda tangan yang baru.</span>
+    </div>
+  </section>
+
+  <section id="pembuat">
+    <div class="about">
+      <div class="portrait"><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/halozharr.webp" alt="Foto halozharr, pembuat KERJAREADY" loading="lazy" width="513" height="749"></div>
+      <div class="story">
+        <h2>Kenapa aku bikin KERJAREADY</h2>
+        <p>Banyak yang baru lulus sebenarnya punya bekal bagus: organisasi, magang, proyek kampus. Masalahnya, mereka bingung cara menuliskannya di CV. Nggak tahu skill mana yang dicari lowongan, nggak paham ATS, lalu akhirnya melamar dengan rasa kurang percaya diri.</p>
+        <p>KERJAREADY aku bikin untuk membantu persiapan itu. Kamu bisa bikin CV yang rapi dari profilmu sendiri, mencocokkannya dengan lowongan yang kamu incar, dan melihat bagian mana yang sudah kuat dan mana yang masih kurang.</p>
+        <p>Ini masih versi beta. Kamu salah satu dari 10 orang pertama yang mencoba, jadi masukanmu akan langsung membentuk versi berikutnya.</p>
+        <div class="sign"><b>halozharr</b>Developer KERJAREADY</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tanya">
+    <div class="faq">
+      <div>
+        <h2>Tanya jawab</h2>
+        <p class="intro">Ada pertanyaan lain? Kirim email ke <a href="mailto:halo@kerjain.work">halo@kerjain.work</a>.</p>
+      </div>
+      <div>
+        <details>
+          <summary>Kenapa HP memberi peringatan saat memasang?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Android selalu memberi peringatan untuk aplikasi yang dipasang di luar Play Store. KERJAREADY sedang diuji sebelum masuk Play Store, jadi peringatan ini wajar.</p>
+        </details>
+        <details>
+          <summary>Bagaimana memastikan filenya asli?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Unduh hanya dari tombol di halaman ini. Filenya disimpan di <a href="https://github.com/sabarmann17/kerjaready-beta/releases/latest">rilis GitHub KERJAREADY</a> dan selalu ditandatangani kunci yang sama. Sidik SHA-256 versi 0.7.2: <code>b2a435e5bc5448c87ecb946e6a2d80b7e53dfffc2f253dd5f6538dc10daf5b54</code></p>
+        </details>
+        <details>
+          <summary>Data CV-ku disimpan di mana?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Akun dan CV disimpan di server Supabase (Singapura), dan hanya kamu yang bisa membacanya. Saat kamu memakai fitur AI, nama, kontak, foto, dan tautanmu tidak ikut dikirim ke AI. Detailnya ada di <a href="/privasi">Kebijakan Privasi</a>.</p>
+        </details>
+        <details>
+          <summary>Bisa dipakai di iPhone?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Belum. Versi beta ini hanya untuk Android.</p>
+        </details>
+        <details>
+          <summary>Kalau kreditnya habis?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Kredit penguji beta terisi lagi setiap bulan. Semua fitur tanpa AI tetap bisa dipakai, termasuk mengubah CV dan menyimpan PDF.</p>
+        </details>
+        <details>
+          <summary>Bagaimana cara menghapus akun?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Ikuti langkah di halaman <a href="/hapus-akun">Hapus akun</a>, atau kirim email ke halo@kerjain.work.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="final">
+    <h2>Coba sekarang, lalu kabari aku hasilnya</h2>
+    <p class="intro">Ceritakan apa yang membingungkan atau yang kurang. Semua masukan dibaca.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+        Unduh APK untuk Android
+      </a>
+      <a class="btn btn-ghost" href="mailto:halo@kerjain.work?subject=Masukan%20KERJAREADY%20beta">Kirim masukan</a>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    <span class="mark">KERJAREADY</span>
+    <a href="/privasi">Kebijakan Privasi</a>
+    <a href="/ketentuan">Ketentuan Layanan</a>
+    <a href="/hapus-akun">Hapus akun</a>
+    <a href="mailto:halo@kerjain.work">halo@kerjain.work</a>
+    <span>© 2026 kerjain.work</span>
+  </footer>
+</div>
+</body>
+</html>
