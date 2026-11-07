@@ -193,6 +193,14 @@ h2{font:700 clamp(30px,3.4vw,44px)/1.15 var(--sans);letter-spacing:-.03em;color:
 .fullf .grp li::before{background:#8FA8FF}
 .fullf .grp{border-top-color:#8FA8FF}
 .js .fullf .grp{background-image:linear-gradient(#8FA8FF,#8FA8FF)}
+.fullf .allf{grid-template-columns:1fr 1fr;gap:36px 40px}
+.grp-no{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:rgba(143,168,255,.16);color:#BFD0FF;font-weight:700;font-size:14px;margin-bottom:12px}
+.fullf .grp h3{font-size:20px;margin-bottom:16px}
+.fullf .grp li{font-size:15.5px;line-height:1.6}
+.grp ul.sub{margin:10px 0 2px;gap:8px}
+.grp ul.sub li{font-size:14.5px;padding-left:16px}
+.grp ul.sub li::before{width:5px;height:5px;background:transparent;border:1.5px solid #8FA8FF}
+.grp ul.sub b{color:#fff;font-weight:600}
 /* beta panel */
 .beta{background:var(--navy);color:#E9EDF7;border-radius:36px;padding:64px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px}
 .beta h2{color:#fff}
@@ -361,6 +369,7 @@ body{overflow-x:clip}
   .allf{grid-template-columns:1fr}
   .final{padding:52px 22px;border-radius:28px;margin-top:80px}
   .fullf{padding:44px 24px;border-radius:28px}
+  .fullf .allf{grid-template-columns:1fr;gap:32px}
   .story p{font-size:17px}
 }
 </style>
@@ -506,12 +515,12 @@ body{overflow-x:clip}
 
   <section id="fitur-lengkap">
     <div class="fullf" data-reveal>
-    <h2 data-reveal>Fitur lengkap</h2>
+    <h2 data-reveal>Fitur Lengkap KERJAREADY</h2>
     <div class="allf">
-      <div class="grp" data-reveal style="--d:0ms"><h3>Profil dan CV Builder</h3><ul><li>Profil karier yang diisi sekali untuk semua CV</li><li>Pendidikan, pengalaman, proyek, keahlian, dan sertifikasi</li><li>Tipe CV: Fresh Graduate, Professional, Internship, Career Transition</li><li>Tiga template: ATS Classic, Professional Modern, Academic</li></ul></div>
-      <div class="grp" data-reveal style="--d:110ms"><h3>Bantuan AI</h3><ul><li>Merapikan kalimat pengalaman</li><li>Membuat ringkasan diri</li><li>AI bertanya kalau informasinya kurang</li><li>Perbandingan sebelum dan sesudah di setiap saran</li></ul></div>
-      <div class="grp" data-reveal style="--d:220ms"><h3>Analisis lowongan</h3><ul><li>Analisis CV dari aplikasi atau file PDF/DOCX</li><li>Tempel lowongan atau ambil dari file DOCX/TXT</li><li>Syarat lowongan bisa dikoreksi sebelum dinilai</li><li>Laporan: kualitas dokumen, relevansi, kekuatan bukti, dan pemetaan kompetensi</li></ul></div>
-      <div class="grp" data-reveal style="--d:330ms"><h3>Simpan dan kelola</h3><ul><li>Ekspor ke PDF dan DOCX</li><li>Beberapa CV untuk lowongan berbeda</li><li>Riwayat versi setiap kali CV diperbaiki</li><li>Riwayat aktivitas dan analisis</li></ul></div>
+      <div class="grp" data-reveal style="--d:0ms"><span class="grp-no">1</span><h3>Profil Karier &amp; AI CV Builder</h3><ul><li>Satu profil karier terintegrasi untuk menyimpan informasi dan digunakan kembali dalam berbagai CV.</li><li>Pengelolaan data pendidikan, pengalaman kerja, organisasi, proyek, keahlian, dan sertifikasi.</li><li>Pilihan format CV sesuai kebutuhan karier: Fresh Graduate, Professional, Internship, dan Career Transition.</li><li>Tiga pilihan template profesional: ATS Classic, Professional Modern, dan Academic.</li></ul></div>
+      <div class="grp" data-reveal style="--d:110ms"><span class="grp-no">2</span><h3>AI Career Writing Assistant</h3><ul><li>AI Writing Enhancement untuk menyempurnakan deskripsi pengalaman agar lebih profesional, terstruktur, dan relevan.</li><li>AI-generated Professional Summary berdasarkan profil dan pengalaman kandidat.</li><li>AI-guided Questions untuk menggali informasi tambahan ketika data belum lengkap atau kurang jelas.</li><li>Transparansi setiap perubahan melalui perbandingan teks asli dan hasil rekomendasi AI.</li><li>Kendali penuh pengguna untuk menerima, mengedit, atau menolak setiap saran AI.</li></ul></div>
+      <div class="grp" data-reveal style="--d:220ms"><span class="grp-no">3</span><h3>AI CV &amp; Job Description Analyzer</h3><ul><li>Analisis CV langsung dari aplikasi atau melalui unggahan dokumen PDF dan DOCX.</li><li>Input deskripsi lowongan melalui teks maupun file DOCX dan TXT.</li><li>Ekstraksi persyaratan pekerjaan yang dapat ditinjau dan dikoreksi sebelum analisis dilakukan.</li><li>Laporan analisis komprehensif yang mencakup:<ul class="sub"><li><b>Document Quality:</b> Kualitas struktur dan kelengkapan CV.</li><li><b>Job Relevance:</b> Relevansi CV terhadap persyaratan pekerjaan.</li><li><b>Evidence Strength:</b> Kekuatan bukti pengalaman dan keahlian kandidat.</li><li><b>Competency Mapping:</b> Pemetaan kompetensi kandidat terhadap kebutuhan posisi.</li></ul></li><li>Rekomendasi perbaikan berdasarkan informasi dan bukti yang ditemukan dalam CV.</li></ul></div>
+      <div class="grp" data-reveal style="--d:330ms"><span class="grp-no">4</span><h3>CV Management &amp; Document Export</h3><ul><li>Ekspor dokumen CV dalam format PDF dan DOCX.</li><li>Membuat dan mengelola beberapa versi CV untuk kebutuhan posisi dan perusahaan yang berbeda.</li><li>Version History untuk melacak setiap perubahan dan penyempurnaan CV.</li><li>Activity History untuk menyimpan riwayat pembuatan CV, ekspor dokumen, dan analisis lowongan.</li></ul></div>
     </div>
     </div>
   </section>
