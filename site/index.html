@@ -5,7 +5,7 @@
 <script src="/js/boot.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KERJAREADY Beta</title>
-<meta name="description" content="AI yang menganalisis CV-mu terhadap lowongan, menunjukkan buktinya, dan memberi rekomendasi perbaikan, tanpa perlu menulis prompt. Unduh APK beta untuk Android.">
+<meta name="description" content="AI yang menganalisis CV-mu terhadap lowongan, menunjukkan buktinya, dan memberi rekomendasi perbaikan, tanpa perlu menulis prompt. Coba gratis langsung dari browser.">
 <meta property="og:title" content="KERJAREADY Beta">
 <meta property="og:description" content="Asisten AI untuk CV yang siap bersaing. Akses beta terbatas untuk 10 penguji pertama.">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/og.png">
@@ -51,6 +51,9 @@ a{color:var(--blue)}
 .btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--navy)}
 .btn-sm{padding:11px 18px;font-size:14px}
 .btn svg{width:18px;height:18px;flex:none}
+.btn-soon{color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line);cursor:default;user-select:none}
+.btn-soon:hover,.btn-soon:active{transform:none}
+.steps-cta{margin-top:32px}
 
 /* hero */
 .hero{background:var(--tint);border:1px solid #DCE5FB;border-radius:36px;padding:64px 56px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;overflow:hidden;position:relative}
@@ -381,9 +384,9 @@ body{overflow-x:clip}
     <a class="link" href="#tentang">Tentang</a>
     <a class="link" href="#beda">Bedanya</a>
     <a class="link" href="#fitur">Fitur</a>
-    <a class="link" href="#pasang">Cara install</a>
+    <a class="link" href="#pasang">Cara mulai</a>
     <a class="link" href="#tanya">Pertanyaan umum</a>
-    <a class="btn btn-primary btn-sm" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">Unduh APK</a>
+    <a class="btn btn-primary btn-sm" href="/app/">Masuk / Daftar</a>
   </header>
 
   <main>
@@ -393,11 +396,11 @@ body{overflow-x:clip}
       <h1>Asisten AI untuk CV yang siap bersaing.</h1>
       <p class="lede">KerjaReady membantu kamu mempersiapkan diri memasuki dunia kerja melalui teknologi AI yang didukung metodologi profesional HR dan evidence-based career assessment.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
-          Unduh APK untuk Android
+        <a class="btn btn-primary" href="/app/">
+          Masuk / Daftar gratis
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#pasang">Lihat cara install</a>
+        <span class="btn btn-soon" role="button" aria-disabled="true" title="Aplikasi Android segera hadir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17h2"/></svg>Segera di Android</span>
       </div>
       <a class="maker" href="#pembuat">
         <img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/halozharr.webp" alt="" width="44" height="44">
@@ -423,7 +426,7 @@ body{overflow-x:clip}
         <dl class="kr-facts">
           <div><dt>Kategori</dt><dd>AI Career Assistant</dd></div>
           <div><dt>Untuk</dt><dd>Fresh graduate dan mahasiswa tingkat akhir</dd></div>
-          <div><dt>Platform</dt><dd>Android</dd></div>
+          <div><dt>Platform</dt><dd>Web (HP dan laptop). Android segera.</dd></div>
         </dl>
       </div>
     </div>
@@ -434,7 +437,7 @@ body{overflow-x:clip}
     <ul class="pains"><li data-reveal style="--d:0ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak tahu cara membuat CV profesional.</li><li data-reveal style="--d:80ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Bingung menuliskan pengalaman organisasi.</li><li data-reveal style="--d:160ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak tahu skill yang relevan dengan lowongan.</li><li data-reveal style="--d:240ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak memahami ATS.</li><li data-reveal style="--d:320ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak tahu apakah CV sudah cukup baik.</li><li data-reveal style="--d:400ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak percaya diri ketika melamar pekerjaan.</li></ul>
     <div class="pain-cta" data-reveal>
       <p>Jika ya, ini adalah aplikasi yang pas untuk kamu!</p>
-      <a class="btn btn-primary" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>Unduh APK untuk Android</a>
+      <a class="btn btn-primary" href="/app/">Mulai sekarang<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
     </div>
   </section>
 
@@ -461,7 +464,7 @@ body{overflow-x:clip}
         <article class="cmp-card us">
           <div class="cmp-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></div>
           <h3>KERJAREADY</h3><p class="cmp-verdict">Tinggal pakai</p><p class="cmp-sub">AI khusus persiapan kerja</p>
-          <a class="btn btn-primary cmp-btn" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">Unduh APK</a>
+          <a class="btn btn-primary cmp-btn" href="/app/">Coba sekarang</a>
           <ul><li class="y"><i aria-hidden="true">✓</i>CV, analisis, dan rekomendasi dalam satu aplikasi</li><li class="y"><i aria-hidden="true">✓</i>Analisis otomatis per syarat lowongan</li><li class="y"><i aria-hidden="true">✓</i>Rekomendasi langsung diterapkan setelah kamu setujui</li><li class="y"><i aria-hidden="true">✓</i>Tanpa perlu prompting</li><li class="y"><i aria-hidden="true">✓</i>Hanya memakai datamu, tidak mengarang pengalaman</li></ul>
         </article>
         <article class="cmp-card">
@@ -526,14 +529,18 @@ body{overflow-x:clip}
   </section>
 
   <section id="pasang">
-    <h2 data-reveal>Install dalam dua menit</h2>
-    <p class="intro" data-reveal style="--d:80ms">KERJAREADY segera di Play Store.</p>
+    <h2 data-reveal>Mulai dalam satu menit</h2>
+    <p class="intro" data-reveal style="--d:80ms">Langsung dari browser di HP atau laptop, tanpa install. Aplikasi Android segera hadir.</p>
     <ol class="steps">
-      <li data-reveal style="--d:0ms"><h3>Unduh dari HP</h3><p>Buka halaman ini di HP Android, lalu ketuk Unduh APK.</p></li>
-      <li data-reveal style="--d:110ms"><h3>Buka file APK</h3><p>Ketuk kerjaready-beta.apk dari notifikasi unduhan atau folder Download.</p></li>
-      <li data-reveal style="--d:220ms"><h3>Izinkan install</h3><p>Jika muncul izin "sumber tidak dikenal", izinkan untuk browser atau File Manager.</p></li>
-      <li data-reveal style="--d:330ms"><h3>Masuk dengan email</h3><p>Buka aplikasi, masukkan email, lalu ketik kode verifikasi yang dikirim ke inbox-mu.</p></li>
+      <li data-reveal style="--d:0ms"><h3>Klik Masuk / Daftar</h3><p>Tombolnya ada di bagian atas halaman ini.</p></li>
+      <li data-reveal style="--d:110ms"><h3>Pilih akun Google</h3><p>Akun KERJAREADY dibuat otomatis, tanpa kata sandi baru.</p></li>
+      <li data-reveal style="--d:220ms"><h3>Lengkapi profil karier</h3><p>Isi pendidikan, pengalaman, dan skill. Bisa dilanjutkan kapan saja.</p></li>
+      <li data-reveal style="--d:330ms"><h3>Buat dan analisis CV</h3><p>Susun CV profesional, lalu cocokkan dengan lowongan incaranmu.</p></li>
     </ol>
+    <div class="cta steps-cta" data-reveal>
+      <a class="btn btn-primary" href="/app/">Masuk / Daftar gratis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <span class="btn btn-soon" role="button" aria-disabled="true" title="Aplikasi Android segera hadir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17h2"/></svg>Segera di Android</span>
+    </div>
   </section>
 
   <section id="pembuat">
@@ -557,20 +564,20 @@ body{overflow-x:clip}
       </div>
       <div>
         <details data-reveal style="--d:0ms">
-          <summary>Kenapa HP memberi peringatan saat install?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Android selalu menampilkan peringatan untuk aplikasi yang di-install di luar Play Store. KERJAREADY sedang dalam tahap uji sebelum dirilis di Play Store, sehingga peringatan ini wajar.</p>
+          <summary>Perlu install aplikasi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Tidak. KERJAREADY berjalan langsung di browser HP maupun laptop. Kami sarankan Chrome versi terbaru. Aplikasi Android segera hadir.</p>
         </details>
         <details data-reveal style="--d:70ms">
-          <summary>Bagaimana memastikan filenya asli?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Unduh hanya dari tombol di halaman ini. Filenya disimpan di <a href="https://github.com/sabarmann17/kerjaready-beta/releases/latest">rilis GitHub KERJAREADY</a> dan selalu ditandatangani kunci yang sama. Sidik SHA-256 versi 0.7.2: <code>b2a435e5bc5448c87ecb946e6a2d80b7e53dfffc2f253dd5f6538dc10daf5b54</code></p>
+          <summary>Kenapa masuk dengan akun Google?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Supaya daftar dan masuk cukup satu klik, tanpa kata sandi baru. KERJAREADY hanya menerima nama dan alamat email dari akun Google-mu, bukan isi Gmail atau Drive.</p>
         </details>
         <details data-reveal style="--d:140ms">
           <summary>Data CV-ku disimpan di mana?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Akun dan CV disimpan di server Supabase (Singapura), dan hanya kamu yang bisa membacanya. Saat kamu memakai fitur AI, nama, kontak, foto, dan tautanmu tidak ikut dikirim ke AI. Detailnya ada di <a href="/privasi">Kebijakan Privasi</a>.</p>
+          <p>Akun dan CV disimpan di server Supabase (Singapura), dan hanya kamu yang bisa membacanya. Saat kamu memakai fitur AI, nama, kontak, foto, dan tautanmu tidak ikut dikirim ke AI. Riwayat analisis dan file CV yang kamu simpan berada di browser perangkat yang kamu pakai, jadi akan hilang bila data situs dihapus. Detailnya ada di <a href="/privasi">Kebijakan Privasi</a>.</p>
         </details>
         <details data-reveal style="--d:210ms">
           <summary>Bisa dipakai di iPhone?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Belum. Versi beta ini hanya untuk Android.</p>
+          <p>Bisa. Buka kerjaready.kerjain.work lewat browser di iPhone, iPad, Android, atau laptop, lalu masuk dengan akun Google.</p>
         </details>
         <details data-reveal style="--d:280ms">
           <summary>Kalau kreditnya habis?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
@@ -588,9 +595,9 @@ body{overflow-x:clip}
     <h2>Coba sekarang<br>dan berikan feedback</h2>
     <p class="intro" data-reveal style="--d:80ms">Masukanmu sangat berarti.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="https://github.com/sabarmann17/kerjaready-beta/releases/latest/download/kerjaready-beta.apk">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
-        Unduh APK untuk Android
+      <a class="btn btn-primary" href="/app/">
+        Masuk / Daftar gratis
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
       </a>
       <a class="btn btn-ghost" href="mailto:halo@kerjain.work?subject=Masukan%20KERJAREADY%20beta">Kirim masukan</a>
     </div>

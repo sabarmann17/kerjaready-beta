@@ -1,0 +1,4 @@
+html, body { margin: 0; height: 100%; background: #EEF2F8; }
+#splash { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #5B6478; font-size: 14px; }
+#splash img { border-radius: 18px; animation: kr-pulse 1.4s ease-in-out infinite; }
+@keyframes kr-pulse { 50% { transform: scale(.94); opacity: .75; } }
