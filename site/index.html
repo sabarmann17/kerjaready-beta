@@ -20,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://potensiku.work/#org","name":"Potensiku","url":"https://potensiku.work/","logo":"https://potensiku.work/apple-touch-icon.png","email":"halo@potensiku.work"},{"@type":"WebSite","@id":"https://potensiku.work/#website","url":"https://potensiku.work/","name":"Potensiku","inLanguage":"id-ID","publisher":{"@id":"https://potensiku.work/#org"}},{"@type":"WebApplication","name":"Potensiku","url":"https://potensiku.work/app/","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"id-ID","description":"AI Career Companion: susun CV dari pengalaman nyata, impor CV lama, dan pahami kesesuaian CV dengan syarat lowongan dengan bantuan Super AI.","publisher":{"@id":"https://potensiku.work/#org"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apa itu Potensiku?","acceptedAnswer":{"@type":"Answer","text":"Potensiku adalah AI Career Companion yang membantu kamu memahami kemampuan yang kamu miliki dan menyiapkan diri menghadapi peluang kerja. Saat ini fokus pada persiapan melamar: profil karier, CV, impor CV, dan analisis CV terhadap lowongan."}},{"@type":"Question","name":"Apa yang dimaksud dengan Super AI?","acceptedAnswer":{"@type":"Answer","text":"Super AI adalah teknologi AI inti Potensiku. Ia membaca profil dan CV-mu, menghubungkannya dengan syarat lowongan, lalu menyusun rekomendasi yang bisa kamu tinjau. Penyedia model AI yang kami gunakan disebutkan di Kebijakan Privasi."}},{"@type":"Question","name":"Siapa yang bisa memakai Potensiku? Hanya untuk fresh graduate?","acceptedAnswer":{"@type":"Answer","text":"Tidak hanya. Mahasiswa tingkat akhir, fresh graduate, pencari kerja, hingga profesional yang ingin pindah atau naik karier bisa memakainya. Tersedia tipe CV Fresh Graduate, Professional, Internship, dan Career Transition."}},{"@type":"Question","name":"Apakah Potensiku menjamin saya diterima kerja?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Tidak ada aplikasi yang bisa menjamin itu. Potensiku membantu kamu menyiapkan CV yang jelas dan jujur serta memahami kesesuaiannya dengan lowongan. Keputusan tetap ada di perekrut."}},{"@type":"Question","name":"Apakah AI akan menambahkan pengalaman yang tidak saya miliki?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Super AI hanya memakai informasi yang kamu berikan. Saran yang memuat hal di luar datamu dibuang sebelum ditampilkan, dan setiap perubahan harus kamu setujui."}},{"@type":"Question","name":"Bagaimana Potensiku menggunakan dan melindungi data saya?","acceptedAnswer":{"@type":"Answer","text":"Akun dan CV disimpan di server Supabase (Singapura) dan hanya bisa dibaca oleh pemilik akun. Saat memakai fitur AI untuk CV dari aplikasi, nama, kontak, foto, dan tautanmu tidak ikut dikirim. Riwayat analisis dan file CV yang kamu simpan berada di browser perangkatmu. Detailnya ada di Kebijakan Privasi."}},{"@type":"Question","name":"Gratis atau berbayar?","acceptedAnswer":{"@type":"Answer","text":"Pengguna baru mendapat trial gratis 12 kredit AI sekali pakai, cukup untuk satu alur lengkap. Fitur tanpa AI, seperti menyusun CV dan menyimpan PDF, tetap bisa dipakai. Paket berbayar akan diumumkan saat peluncuran."}},{"@type":"Question","name":"Perlu install aplikasi? Bisa di iPhone?","acceptedAnswer":{"@type":"Answer","text":"Tidak perlu install. Potensiku berjalan di browser HP (Android maupun iPhone) dan laptop. Aplikasi Android segera hadir."}},{"@type":"Question","name":"Bagaimana cara menghapus akun?","acceptedAnswer":{"@type":"Answer","text":"Ikuti langkah di halaman Hapus akun, atau kirim email ke halo@potensiku.work."}}]}]}</script>
 <style>
 :root{
   --paper:#F7F9FC;
@@ -384,6 +385,9 @@ body{overflow-x:clip}
 }
 
 /* ===== Potensiku additions ===== */
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+main:focus{outline:none}
 .mark{display:inline-flex;align-items:center;gap:10px;letter-spacing:-.01em;font-size:20px;font-weight:800}
 .mark i{width:32px;height:32px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center;font-style:normal;font-size:18px;font-weight:800}
 .eyebrow{display:block;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--blue);margin-top:20px}
@@ -442,9 +446,10 @@ body{overflow-x:clip}
 </style>
 </head>
 <body>
+<a class="skip" href="#konten">Lewati ke konten</a>
 <div class="wrap">
   <header class="top">
-    <a class="mark" href="#" aria-label="Potensiku, ke atas"><i aria-hidden="true">P</i>Potensiku</a>
+    <a class="mark" href="#"><i aria-hidden="true">P</i>Potensiku</a>
     <a class="link" href="#super-ai">Super AI</a>
     <a class="link" href="#perjalanan">Perjalanan karier</a>
     <a class="link" href="#fitur">Fitur</a>
@@ -453,7 +458,7 @@ body{overflow-x:clip}
     <a class="btn btn-primary btn-sm" href="/app/" data-ev="nav_cta">Masuk / Daftar</a>
   </header>
 
-  <main>
+  <main id="konten" tabindex="-1">
   <div class="hero">
     <div class="hero-copy">
       <span class="pill"><i></i>Versi beta · gratis dicoba</span>
@@ -467,7 +472,7 @@ body{overflow-x:clip}
       <span class="powered"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>Powered by Super AI</span>
     </div>
     <div class="hero-stage stage" aria-hidden="true">
-      <div class="phone device"><img class="scr" src="/img/beranda.webp" alt="" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div>
+      <div class="phone device"><img class="scr" src="/img/beranda.webp" alt="" fetchpriority="high" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div>
       <div class="ev ev1 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><span class="sp-tag">Profil karier</span><strong>Semua pengalamanmu, rapi di satu tempat</strong></div></div>
       <div class="ev ev2 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><div><span class="sp-tag">Super AI</span><strong>Syarat lowongan dipetakan ke bukti di CV-mu</strong></div></div>
       <div class="ev ev3 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><span class="sp-tag">Kendali di tanganmu</span><strong>Setiap saran AI kamu tinjau dulu</strong></div></div>
