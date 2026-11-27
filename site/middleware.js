@@ -1,9 +1,7 @@
 // Routing middleware Vercel: berjalan sebelum file statis, jadi semua
 // permintaan ke admin.potensiku.work diarahkan ke folder /admin/ (Admin
 // Console). Domain lain tidak tersentuh.
-export const config = {
-  matcher: [{ source: '/:path*', has: [{ type: 'host', value: 'admin.potensiku.work' }] }],
-};
+export const config = { matcher: '/:path*' };
 
 export default function middleware(request) {
   const url = new URL(request.url);
