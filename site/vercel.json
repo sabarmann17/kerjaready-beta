@@ -7,7 +7,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://puqvlnzjycwdcldzzwkq.supabase.co; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests"
         },
         {
           "key": "Strict-Transport-Security",
@@ -36,6 +36,12 @@
         {
           "key": "X-Permitted-Cross-Domain-Policies",
           "value": "none"
+        }
+      ],
+      "missing": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
         }
       ]
     },
@@ -82,6 +88,12 @@
           "key": "X-Robots-Tag",
           "value": "noindex"
         }
+      ],
+      "missing": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
       ]
     },
     {
@@ -91,6 +103,12 @@
           "key": "Cache-Control",
           "value": "public, max-age=300, must-revalidate"
         }
+      ],
+      "missing": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
       ]
     },
     {
@@ -99,6 +117,67 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ],
+      "missing": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
+      ],
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://accounts.google.com/gsi/ https://puqvlnzjycwdcldzzwkq.supabase.co; frame-src https://accounts.google.com/gsi/; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'none'; worker-src 'none'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=(), interest-cohort=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
+        {
+          "key": "Cross-Origin-Resource-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "X-Permitted-Cross-Domain-Policies",
+          "value": "none"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
         }
       ]
     }
@@ -114,6 +193,50 @@
       ],
       "destination": "https://potensiku.work/:path*",
       "permanent": true
+    },
+    {
+      "source": "/admin/:path*",
+      "missing": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
+      ],
+      "destination": "https://admin.potensiku.work/",
+      "permanent": false
+    },
+    {
+      "source": "/admin",
+      "missing": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
+      ],
+      "destination": "https://admin.potensiku.work/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
+      ],
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "admin.potensiku.work"
+        }
+      ],
+      "destination": "/admin/:path*"
     }
   ]
 }

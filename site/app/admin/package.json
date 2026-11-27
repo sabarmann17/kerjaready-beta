@@ -1,0 +1,16 @@
+{
+  "name": "potensiku-admin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Potensiku Admin Console (admin.potensiku.work)",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:demo": "node build.mjs --demo"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.49.4"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.2"
+  }
+}

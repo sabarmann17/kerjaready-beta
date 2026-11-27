@@ -1,0 +1,355 @@
+[
+ {
+  "id": "hero",
+  "name": "Hero",
+  "fields": [
+   {
+    "key": "hero.eyebrow",
+    "label": "Label kecil (eyebrow)",
+    "default": "YOUR AI CAREER COMPANION",
+    "max": 160,
+    "multiline": false
+   },
+   {
+    "key": "hero.title",
+    "label": "Judul utama (H1)",
+    "default": "Kenali potensimu. Tentukan langkah kariermu.",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "hero.lede",
+    "label": "Deskripsi",
+    "default": "Potensiku membantu kamu memahami kemampuan yang sudah kamu miliki dan menyiapkan diri menghadapi peluang kerja, dengan bantuan Super AI.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "hero.cta1",
+    "label": "Tombol utama",
+    "default": "Mulai Kenali Potensimu",
+    "max": 160,
+    "multiline": false
+   },
+   {
+    "key": "hero.cta2",
+    "label": "Tombol kedua",
+    "default": "Lihat Cara Kerjanya",
+    "max": 160,
+    "multiline": false
+   }
+  ]
+ },
+ {
+  "id": "masalah",
+  "name": "Masalah",
+  "fields": [
+   {
+    "key": "masalah.title",
+    "label": "Judul",
+    "default": "Punya potensi, tapi belum tahu harus mulai dari mana?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "masalah.intro",
+    "label": "Deskripsi",
+    "default": "Mungkin kamu sedang mengalami salah satu dari ini.",
+    "max": 600,
+    "multiline": true
+   }
+  ]
+ },
+ {
+  "id": "superai",
+  "name": "Super AI",
+  "fields": [
+   {
+    "key": "superai.title",
+    "label": "Judul",
+    "default": "Bukan sekadar AI yang menjawab. Super AI membantu kamu memahami langkah berikutnya.",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "superai.intro",
+    "label": "Deskripsi",
+    "default": "Super AI menghubungkan profil, pengalaman, dan kemampuanmu dengan kebutuhan lowongan yang kamu incar, lalu menyusun rekomendasi yang bisa langsung kamu tindak lanjuti. Tanpa perlu menulis prompt.",
+    "max": 600,
+    "multiline": true
+   }
+  ]
+ },
+ {
+  "id": "perjalanan",
+  "name": "Perjalanan karier",
+  "fields": [
+   {
+    "key": "perjalanan.title",
+    "label": "Judul",
+    "default": "Satu pendamping untuk seluruh perjalanan kariermu",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "perjalanan.intro",
+    "label": "Deskripsi",
+    "default": "Potensiku dibangun untuk menemani setiap tahap. Saat ini kami mulai dari persiapan melamar kerja; tahap lainnya sedang dikembangkan.",
+    "max": 600,
+    "multiline": true
+   }
+  ]
+ },
+ {
+  "id": "fitur",
+  "name": "Fitur",
+  "fields": [
+   {
+    "key": "fitur.title",
+    "label": "Judul",
+    "default": "Yang bisa kamu pakai hari ini",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "fitur.intro",
+    "label": "Deskripsi",
+    "default": "Semua fitur di bawah ini sudah tersedia di versi beta.",
+    "max": 600,
+    "multiline": true
+   }
+  ]
+ },
+ {
+  "id": "carakerja",
+  "name": "Cara kerja",
+  "fields": [
+   {
+    "key": "carakerja.title",
+    "label": "Judul",
+    "default": "Cara kerjanya",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "carakerja.intro",
+    "label": "Deskripsi",
+    "default": "Langsung dari browser di HP atau laptop, tanpa install.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "carakerja.cta",
+    "label": "Tombol",
+    "default": "Mulai Kenali Potensimu",
+    "max": 160,
+    "multiline": false
+   }
+  ]
+ },
+ {
+  "id": "kepercayaan",
+  "name": "Kepercayaan",
+  "fields": [
+   {
+    "key": "kepercayaan.title",
+    "label": "Judul",
+    "default": "AI yang membantu, tanpa mengarang perjalananmu.",
+    "max": 160,
+    "multiline": true
+   }
+  ]
+ },
+ {
+  "id": "pembuat",
+  "name": "Kenapa Potensiku",
+  "fields": [
+   {
+    "key": "pembuat.title",
+    "label": "Judul",
+    "default": "Kenapa Potensiku",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "pembuat.p1",
+    "label": "Paragraf 1",
+    "default": "Banyak orang sebenarnya punya bekal yang kuat: pengalaman organisasi, magang, proyek, atau pekerjaan sebelumnya. Yang sering sulit adalah menjelaskannya, memahami apa yang dicari perusahaan, dan menentukan langkah berikutnya.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "pembuat.p2",
+    "label": "Paragraf 2",
+    "default": "Potensiku hadir untuk membantu itu. Dengan Super AI, kamu bisa menyusun CV dari pengalamanmu sendiri, mencocokkannya dengan lowongan, dan melihat bagian mana yang sudah kuat serta mana yang perlu dikembangkan.",
+    "max": 600,
+    "multiline": true
+   }
+  ]
+ },
+ {
+  "id": "faq",
+  "name": "FAQ",
+  "fields": [
+   {
+    "key": "faq.title",
+    "label": "Judul",
+    "default": "Pertanyaan umum",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.q1",
+    "label": "Pertanyaan 1",
+    "default": "Apa itu Potensiku?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.a1",
+    "label": "Jawaban 1",
+    "default": "Potensiku adalah AI Career Companion yang membantu kamu memahami kemampuan yang kamu miliki dan menyiapkan diri menghadapi peluang kerja. Saat ini fokus pada persiapan melamar: profil karier, CV, impor CV, dan analisis CV terhadap lowongan.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "faq.q2",
+    "label": "Pertanyaan 2",
+    "default": "Apa yang dimaksud dengan Super AI?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.q3",
+    "label": "Pertanyaan 3",
+    "default": "Siapa yang bisa memakai Potensiku? Hanya untuk fresh graduate?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.a3",
+    "label": "Jawaban 3",
+    "default": "Tidak hanya. Mahasiswa tingkat akhir, fresh graduate, pencari kerja, hingga profesional yang ingin pindah atau naik karier bisa memakainya. Tersedia tipe CV Fresh Graduate, Professional, Internship, dan Career Transition.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "faq.q4",
+    "label": "Pertanyaan 4",
+    "default": "Apakah Potensiku menjamin saya diterima kerja?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.a4",
+    "label": "Jawaban 4",
+    "default": "Tidak. Tidak ada aplikasi yang bisa menjamin itu. Potensiku membantu kamu menyiapkan CV yang jelas dan jujur serta memahami kesesuaiannya dengan lowongan. Keputusan tetap ada di perekrut.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "faq.q5",
+    "label": "Pertanyaan 5",
+    "default": "Apakah AI akan menambahkan pengalaman yang tidak saya miliki?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.a5",
+    "label": "Jawaban 5",
+    "default": "Tidak. Super AI hanya memakai informasi yang kamu berikan. Saran yang memuat hal di luar datamu dibuang sebelum ditampilkan, dan setiap perubahan harus kamu setujui.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "faq.q6",
+    "label": "Pertanyaan 6",
+    "default": "Bagaimana Potensiku menggunakan dan melindungi data saya?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.q7",
+    "label": "Pertanyaan 7",
+    "default": "Gratis atau berbayar?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.a7",
+    "label": "Jawaban 7",
+    "default": "Pengguna baru mendapat trial gratis 12 kredit AI sekali pakai, cukup untuk satu alur lengkap. Fitur tanpa AI, seperti menyusun CV dan menyimpan PDF, tetap bisa dipakai. Paket berbayar akan diumumkan saat peluncuran.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "faq.q8",
+    "label": "Pertanyaan 8",
+    "default": "Perlu install aplikasi? Bisa di iPhone?",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "faq.a8",
+    "label": "Jawaban 8",
+    "default": "Tidak perlu install. Potensiku berjalan di browser HP (Android maupun iPhone) dan laptop. Aplikasi Android segera hadir.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "faq.q9",
+    "label": "Pertanyaan 9",
+    "default": "Bagaimana cara menghapus akun?",
+    "max": 160,
+    "multiline": true
+   }
+  ]
+ },
+ {
+  "id": "cta",
+  "name": "CTA akhir",
+  "fields": [
+   {
+    "key": "cta.title",
+    "label": "Judul",
+    "default": "Perjalanan kariermu punya banyak kemungkinan.",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "cta.intro",
+    "label": "Deskripsi",
+    "default": "Mulai pahami potensimu hari ini.",
+    "max": 600,
+    "multiline": true
+   },
+   {
+    "key": "cta.btn",
+    "label": "Tombol",
+    "default": "Mulai Bersama Potensiku",
+    "max": 160,
+    "multiline": false
+   }
+  ]
+ },
+ {
+  "id": "seo",
+  "name": "SEO & bagikan",
+  "fields": [
+   {
+    "key": "seo.title",
+    "label": "Judul tab browser & Google",
+    "default": "Potensiku — Your AI Career Companion",
+    "max": 160,
+    "multiline": true
+   },
+   {
+    "key": "seo.description",
+    "label": "Deskripsi meta (hasil pencarian Google)",
+    "default": "Kenali potensimu dan persiapkan langkah kariermu dengan bantuan Super AI dari Potensiku. Susun CV dari pengalaman nyata dan pahami kesesuaiannya dengan lowongan.",
+    "max": 600,
+    "multiline": true
+   }
+  ]
+ }
+]
