@@ -216,27 +216,5 @@
       "destination": "https://admin.potensiku.work/",
       "permanent": false
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "admin.potensiku.work"
-        }
-      ],
-      "destination": "/admin/index.html"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "admin.potensiku.work"
-        }
-      ],
-      "destination": "/admin/:path*"
-    }
   ]
 }
