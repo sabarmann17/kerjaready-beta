@@ -4,11 +4,18 @@
 <meta charset="utf-8">
 <script src="/js/boot.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KERJAREADY Beta</title>
-<meta name="description" content="AI yang menganalisis CV-mu terhadap lowongan, menunjukkan buktinya, dan memberi rekomendasi perbaikan, tanpa perlu menulis prompt. Coba gratis langsung dari browser.">
-<meta property="og:title" content="KERJAREADY Beta">
-<meta property="og:description" content="Asisten AI untuk CV yang siap bersaing. Akses beta terbatas untuk 10 penguji pertama.">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/og.png">
+<title>Potensiku — Your AI Career Companion</title>
+<meta name="description" content="Kenali potensimu dan persiapkan langkah kariermu dengan bantuan Super AI dari Potensiku. Susun CV dari pengalaman nyata dan pahami kesesuaiannya dengan lowongan.">
+<link rel="canonical" href="https://potensiku.work/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://potensiku.work/">
+<meta property="og:site_name" content="Potensiku">
+<meta property="og:title" content="Potensiku — Your AI Career Companion">
+<meta property="og:description" content="Kenali potensimu. Tentukan langkah kariermu. Powered by Super AI.">
+<meta property="og:image" content="https://potensiku.work/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F7F9FC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -375,77 +382,121 @@ body{overflow-x:clip}
   .fullf .allf{grid-template-columns:1fr;gap:32px}
   .story p{font-size:17px}
 }
+
+/* ===== Potensiku additions ===== */
+.mark{display:inline-flex;align-items:center;gap:10px;letter-spacing:-.01em;font-size:20px;font-weight:800}
+.mark i{width:32px;height:32px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center;font-style:normal;font-size:18px;font-weight:800}
+.eyebrow{display:block;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--blue);margin-top:20px}
+.hero h1{margin-top:12px}
+.powered{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--navy);margin-top:20px}
+.powered svg{width:18px;height:18px;color:var(--blue)}
+.hero-stage{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:600px}
+.hero-stage .device{width:300px;height:597px;aspect-ratio:auto;margin-bottom:-60px}
+.hero-stage .ev1{left:0;top:40px}.hero-stage .ev2{right:0;top:220px}.hero-stage .ev3{left:10px;top:410px}
+.situ{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.situ li{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;font-size:17px;line-height:1.5;color:var(--ink)}
+.situ li b{display:block;color:var(--navy);font-size:18px;margin-bottom:6px}
+.super{background:var(--navy);border-radius:36px;padding:64px 56px;color:#E9EDF7}
+.super h2{color:#fff;max-width:24ch}
+.super .intro{color:#B9C2D8}
+.super-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(143,168,255,.16);color:#BFD0FF;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;letter-spacing:.06em;margin-bottom:18px}
+.ucg{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ucg li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:26px}
+.ucg .n{font:700 13px/1 var(--sans);letter-spacing:.12em;color:#8FA8FF}
+.ucg h3{font:700 22px/1.25 var(--sans);color:#fff;margin:10px 0 10px}
+.ucg p{margin:0;color:#C3CBDF;font-size:16px}
+.ucg p.real{margin-top:12px;font-size:14px;color:#9FB0D8}
+.super .compare{margin-top:48px;color:var(--ink)}
+.super .swipe-hint{color:#B9C2D8}
+.super .cmp-cards{color:var(--ink)}
+.super .cmp-card li{color:var(--ink)}
+.super .cmp-card li.n{color:var(--muted)}
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.pillar.live{border:2px solid var(--blue);box-shadow:0 18px 36px -24px rgba(49,87,213,.55)}
+.pillar h3{font:700 22px/1.2 var(--sans);color:var(--navy);margin:0}
+.pillar p{margin:0;color:#3A4257;font-size:15.5px}
+.status{align-self:flex-start;font-size:12px;font-weight:700;border-radius:999px;padding:5px 10px}
+.status.on{background:#DDF3EF;color:var(--teal)}
+.status.soon{background:#F1F3F8;color:var(--muted)}
+.howto{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
+.howto li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+.howto li::before{content:counter(s);font:700 28px/1 var(--sans);color:var(--blue);display:block;margin-bottom:14px}
+.howto h3{font:600 16.5px/1.35 var(--sans);color:var(--navy);margin:0 0 6px}
+.howto p{margin:0;font-size:14.5px;color:var(--muted)}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.trust div{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.trust svg{width:26px;height:26px;color:var(--teal)}
+.trust h3{font:700 17px/1.35 var(--sans);color:var(--navy);margin:12px 0 6px}
+.trust p{margin:0;font-size:15px;color:#3A4257}
+.caption{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
+@media (max-width:1020px){.journey{grid-template-columns:1fr 1fr}.howto{grid-template-columns:1fr 1fr}.trust{grid-template-columns:1fr 1fr}.ucg{grid-template-columns:1fr}}
+@media (max-width:720px){
+  .hero-stage{min-height:470px;margin:0 -10px}
+  .hero-stage .device{width:230px;height:458px;margin-bottom:-40px}
+  .hero-stage .ev1{top:10px}.hero-stage .ev2{top:150px}.hero-stage .ev3{top:300px}
+  .situ,.journey,.howto,.trust{grid-template-columns:1fr;gap:12px}
+  .super{padding:44px 22px;border-radius:28px}
+  .super .compare{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="mark" href="#">KERJAREADY</a>
-    <a class="link" href="#tentang">Tentang</a>
-    <a class="link" href="#beda">Bedanya</a>
+    <a class="mark" href="#" aria-label="Potensiku, ke atas"><i aria-hidden="true">P</i>Potensiku</a>
+    <a class="link" href="#super-ai">Super AI</a>
+    <a class="link" href="#perjalanan">Perjalanan karier</a>
     <a class="link" href="#fitur">Fitur</a>
-    <a class="link" href="#pasang">Cara mulai</a>
-    <a class="link" href="#tanya">Pertanyaan umum</a>
-    <a class="btn btn-primary btn-sm" href="/app/">Masuk / Daftar</a>
+    <a class="link" href="#cara-kerja">Cara kerja</a>
+    <a class="link" href="#tanya">FAQ</a>
+    <a class="btn btn-primary btn-sm" href="/app/" data-ev="nav_cta">Masuk / Daftar</a>
   </header>
 
   <main>
   <div class="hero">
     <div class="hero-copy">
-      <span class="pill"><i></i>Akses beta terbatas untuk 10 penguji pertama</span>
-      <h1>Asisten AI untuk CV yang siap bersaing.</h1>
-      <p class="lede">KerjaReady membantu kamu mempersiapkan diri memasuki dunia kerja melalui teknologi AI yang didukung metodologi profesional HR dan evidence-based career assessment.</p>
+      <span class="pill"><i></i>Versi beta · gratis dicoba</span>
+      <span class="eyebrow">YOUR AI CAREER COMPANION</span>
+      <h1>Kenali potensimu. Tentukan langkah kariermu.</h1>
+      <p class="lede">Potensiku membantu kamu memahami kemampuan yang sudah kamu miliki dan menyiapkan diri menghadapi peluang kerja, dengan bantuan Super AI.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="/app/">
-          Masuk / Daftar gratis
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-        </a>
-        <span class="btn btn-soon" role="button" aria-disabled="true" title="Aplikasi Android segera hadir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17h2"/></svg>Segera di Android</span>
+        <a class="btn btn-primary" href="/app/">Mulai Kenali Potensimu<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#cara-kerja">Lihat Cara Kerjanya</a>
       </div>
-      <a class="maker" href="#pembuat">
-        <img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/halozharr.webp" alt="" width="44" height="44">
-        <span><b>Dibuat oleh halozharr</b>Kisah di balik KERJAREADY</span>
-      </a>
+      <span class="powered"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>Powered by Super AI</span>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="hand"><img src="/img/hand-hero.webp" alt="" width="653" height="944"><span class="scanzone"></span></div>
-      <div class="ev ev1 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><span class="sp-tag">CV Builder</span><strong>Membuat CV profesional</strong></div></div>
-      <div class="ev ev2 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><div><span class="sp-tag">AI Analyzer</span><strong>Menganalisis CV berdasarkan lowongan pekerjaan dengan AI</strong></div></div>
-      <div class="ev ev3 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><span class="sp-tag">Profil Karier</span><strong>Mengelola profil dan informasi karier</strong></div></div>
+    <div class="hero-stage stage" aria-hidden="true">
+      <div class="phone device"><img class="scr" src="/img/beranda.webp" alt="" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div>
+      <div class="ev ev1 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><span class="sp-tag">Profil karier</span><strong>Semua pengalamanmu, rapi di satu tempat</strong></div></div>
+      <div class="ev ev2 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><div><span class="sp-tag">Super AI</span><strong>Syarat lowongan dipetakan ke bukti di CV-mu</strong></div></div>
+      <div class="ev ev3 sp"><span class="sp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></span><div><span class="sp-tag">Kendali di tanganmu</span><strong>Setiap saran AI kamu tinjau dulu</strong></div></div>
     </div>
   </div>
 
-  <section id="tentang">
-    <div class="about-kr" data-reveal>
-      <div>
-        <span class="kr-label">AI Career Assistant</span>
-        <h2>KerjaReady<br>Your AI Career Companion</h2>
-      </div>
-      <div class="kr-body">
-        <p>Asisten karier berbasis AI yang menemani kamu dari menyusun CV pertama hingga siap melamar, dengan Bahasa Indonesia sebagai bahasa utama.</p>
-        <dl class="kr-facts">
-          <div><dt>Kategori</dt><dd>AI Career Assistant</dd></div>
-          <div><dt>Untuk</dt><dd>Fresh graduate dan mahasiswa tingkat akhir</dd></div>
-          <div><dt>Platform</dt><dd>Web (HP dan laptop). Android segera.</dd></div>
-        </dl>
-      </div>
-    </div>
+  <section id="masalah">
+    <h2 data-reveal>Punya potensi, tapi belum tahu harus mulai dari mana?</h2>
+    <p class="intro" data-reveal style="--d:80ms">Mungkin kamu sedang mengalami salah satu dari ini.</p>
+    <ul class="situ">
+      <li data-reveal style="--d:0ms"><b>Pengalaman ada, sulit menjelaskannya</b>Organisasi, magang, proyek kuliah, atau pekerjaan sebelumnya sudah ada, tapi bingung menuliskannya di CV.</li>
+      <li data-reveal style="--d:80ms"><b>Menemukan lowongan, ragu apakah relevan</b>Tidak yakin bagian mana dari profilmu yang sudah sesuai dengan syarat pekerjaan.</li>
+      <li data-reveal style="--d:160ms"><b>Ingin berkembang, belum tahu arahnya</b>Belum jelas skill apa yang perlu diperkuat untuk posisi yang kamu incar.</li>
+      <li data-reveal style="--d:240ms"><b>Banyak pilihan, sulit menentukan langkah</b>Saran di internet terlalu umum dan tidak berangkat dari pengalamanmu sendiri.</li>
+    </ul>
   </section>
 
-  <section id="untuk-kamu">
-    <h2 data-reveal>Aplikasi ini untuk kamu yang:</h2>
-    <ul class="pains"><li data-reveal style="--d:0ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak tahu cara membuat CV profesional.</li><li data-reveal style="--d:80ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Bingung menuliskan pengalaman organisasi.</li><li data-reveal style="--d:160ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak tahu skill yang relevan dengan lowongan.</li><li data-reveal style="--d:240ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak memahami ATS.</li><li data-reveal style="--d:320ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak tahu apakah CV sudah cukup baik.</li><li data-reveal style="--d:400ms"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span>Tidak percaya diri ketika melamar pekerjaan.</li></ul>
-    <div class="pain-cta" data-reveal>
-      <p>Jika ya, ini adalah aplikasi yang pas untuk kamu!</p>
-      <a class="btn btn-primary" href="/app/">Mulai sekarang<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-    </div>
-  </section>
-
-  <section id="beda">
-    <h2 data-reveal>Lebih dari template. Lebih mudah dari AI chat.</h2>
-    <p class="intro" data-reveal style="--d:80ms">Bandingkan KerjaReady dengan platform lainnya. Kami membantumu dari awal hingga akhir.</p>
+  <section id="super-ai">
+    <div class="super" data-reveal>
+      <span class="super-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>SUPER AI</span>
+      <h2>Bukan sekadar AI yang menjawab. Super AI membantu kamu memahami langkah berikutnya.</h2>
+      <p class="intro">Super AI menghubungkan profil, pengalaman, dan kemampuanmu dengan kebutuhan lowongan yang kamu incar, lalu menyusun rekomendasi yang bisa langsung kamu tindak lanjuti. Tanpa perlu menulis prompt.</p>
+      <ol class="ucg">
+        <li data-reveal style="--d:0ms"><span class="n">01 · UNDERSTAND</span><h3>Memahami datamu</h3><p>Membaca profil karier yang kamu isi, atau memindahkan isi CV lamamu ke profil tanpa mengetik ulang.</p></li>
+        <li data-reveal style="--d:110ms"><span class="n">02 · CONNECT</span><h3>Menghubungkan dengan lowongan</h3><p>Mengurai setiap syarat lowongan dan mencari buktinya di CV-mu: jelas, sebagian, tidak ditemukan, atau belum jelas, lengkap dengan kutipannya.</p></li>
+        <li data-reveal style="--d:220ms"><span class="n">03 · GUIDE</span><h3>Membantu langkah berikutnya</h3><p>Menyusun rekomendasi perbaikan dari hasil analisis. Kamu meninjau, mengubah, atau menolak setiap saran sebelum masuk ke CV.</p></li>
+      </ol>
     <div class="compare" data-reveal>
-      <div class="crow chead"><div></div><div>Situs template CV</div><div>AI chat umum</div><div class="us">KERJAREADY</div></div>
+      <div class="crow chead"><div></div><div>Situs template CV</div><div>AI chat umum</div><div class="us">Potensiku</div></div>
       <div class="crow" data-reveal style="--d:0ms"><div class="k">Yang kamu dapat</div><div class="them" data-l="Situs template CV">Template CV siap isi.</div><div class="them" data-l="AI chat umum">Jawaban sesuai prompt yang kamu tulis.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>CV, analisis per syarat lowongan, dan rekomendasi perbaikan dalam satu aplikasi.</span></div></div>
       <div class="crow" data-reveal style="--d:90ms"><div class="k">Analisis CV terhadap lowongan</div><div class="them" data-l="Situs template CV">Tidak tersedia.</div><div class="them" data-l="AI chat umum">Bisa, jika kamu menguasai teknik prompting.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Otomatis. Tempel lowongan, AI mengurai setiap syarat dan mencari buktinya di CV-mu.</span></div></div>
       <div class="crow" data-reveal style="--d:180ms"><div class="k">Rekomendasi perbaikan</div><div class="them" data-l="Situs template CV">Tidak tersedia.</div><div class="them" data-l="AI chat umum">Perlu ditanyakan berulang dan disalin manual ke CV.</div><div class="us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Dihasilkan dari analisis dan diterapkan langsung ke CV setelah kamu setujui.</span></div></div>
@@ -463,7 +514,7 @@ body{overflow-x:clip}
         </article>
         <article class="cmp-card us">
           <div class="cmp-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></div>
-          <h3>KERJAREADY</h3><p class="cmp-verdict">Tinggal pakai</p><p class="cmp-sub">AI khusus persiapan kerja</p>
+          <h3>Potensiku</h3><p class="cmp-verdict">Didampingi Super AI</p><p class="cmp-sub">AI khusus persiapan kerja</p>
           <a class="btn btn-primary cmp-btn" href="/app/">Coba sekarang</a>
           <ul><li class="y"><i aria-hidden="true">✓</i>CV, analisis, dan rekomendasi dalam satu aplikasi</li><li class="y"><i aria-hidden="true">✓</i>Analisis otomatis per syarat lowongan</li><li class="y"><i aria-hidden="true">✓</i>Rekomendasi langsung diterapkan setelah kamu setujui</li><li class="y"><i aria-hidden="true">✓</i>Tanpa perlu prompting</li><li class="y"><i aria-hidden="true">✓</i>Hanya memakai datamu, tidak mengarang pengalaman</li></ul>
         </article>
@@ -476,82 +527,108 @@ body{overflow-x:clip}
       </div>
       <div class="cmp-dots" aria-hidden="true"><b></b><b class="on"></b><b></b></div>
     </div>
+
+    </div>
+  </section>
+
+  <section id="perjalanan">
+    <h2 data-reveal>Satu pendamping untuk seluruh perjalanan kariermu</h2>
+    <p class="intro" data-reveal style="--d:80ms">Potensiku dibangun untuk menemani setiap tahap. Saat ini kami mulai dari persiapan melamar kerja; tahap lainnya sedang dikembangkan.</p>
+    <div class="journey">
+      <div class="pillar" data-reveal style="--d:0ms"><span class="status soon">Segera hadir</span><h3>Discover</h3><p>Kenali minat, kemampuan, dan kemungkinan arah kariermu.</p></div>
+      <div class="pillar live" data-reveal style="--d:90ms"><span class="status on">Tersedia sekarang</span><h3>Prepare</h3><p>Bangun profil dan CV, impor CV lama, lalu analisis kesesuaiannya dengan lowongan.</p></div>
+      <div class="pillar" data-reveal style="--d:180ms"><span class="status soon">Segera hadir</span><h3>Develop</h3><p>Identifikasi skill yang perlu diperkuat dan rencanakan pengembangannya.</p></div>
+      <div class="pillar" data-reveal style="--d:270ms"><span class="status soon">Segera hadir</span><h3>Grow</h3><p>Evaluasi pilihan dan langkah perkembangan profesionalmu.</p></div>
+    </div>
   </section>
 
   <section id="fitur">
-    <h2 data-reveal>Satu aplikasi, dari profil hingga CV siap kirim</h2>
-    <p class="intro" data-reveal style="--d:80ms">Tiga kemampuan utama yang bisa kamu coba di versi beta.</p>
+    <h2 data-reveal>Yang bisa kamu pakai hari ini</h2>
+    <p class="intro" data-reveal style="--d:80ms">Semua fitur di bawah ini sudah tersedia di versi beta.</p>
 
     <div class="feature" data-reveal>
-      <div class="shot"><div class="phone device"><img class="scr" src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/pratinjau-cv.webp" alt="Pratinjau CV di aplikasi KERJAREADY dengan contoh data Rina Kartika" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div></div>
+      <div class="shot"><div class="phone device"><img class="scr" src="/img/impor-cv.webp" alt="Layar Impor CV: unggah CV lama berformat PDF atau DOCX" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div></div>
       <div>
-        <h3>Susun CV profesional dari profilmu</h3>
-        <p>Lengkapi profil sekali, mulai dari pendidikan, organisasi, magang, hingga proyek kuliah. AI menyempurnakan setiap kalimat berdasarkan data yang kamu tulis, tanpa menambahkan pengalaman yang tidak kamu miliki.</p>
+        <h3>Profil karier, tanpa mengetik ulang</h3>
+        <p>Sudah punya CV? Unggah file PDF atau DOCX, dan Super AI memindahkan isinya ke profilmu. Kamu memeriksa setiap bagian, lalu melengkapi yang ditandai kurang.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Template ramah ATS</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Ekspor ke PDF dan DOCX</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Banyak CV untuk berbagai lowongan, cukup satu profil</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Hanya menyalin yang tertulis di CV-mu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Data yang belum lengkap ditandai, bukan ditebak</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Atau isi sendiri: pendidikan, pengalaman, proyek, keahlian, sertifikasi</li>
         </ul>
       </div>
     </div>
 
     <div class="feature" data-reveal>
-      <div class="shot"><div class="phone device"><img class="scr" src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/pemetaan.webp" alt="Hasil pemetaan kompetensi: status bukti setiap syarat lowongan di CV" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div></div>
+      <div class="shot"><div class="phone device"><img class="scr" src="/img/pratinjau-cv.webp" alt="Pratinjau CV dengan data contoh fiktif" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div></div>
       <div>
-        <h3>Analisis CV per syarat lowongan</h3>
-        <p>Tempel deskripsi lowongan dan AI akan mengurai setiap syaratnya. Kamu bisa meninjau dan mengoreksi daftar tersebut sebelum penilaian dimulai.</p>
-        <p>Setiap syarat diberi status yang jelas: bukti jelas, bukti sebagian, tidak ditemukan di CV, atau belum jelas, lengkap dengan kutipan langsung dan bagian CV asalnya. &ldquo;Tidak ditemukan&rdquo; berarti belum tertulis di CV, bukan berarti kamu tidak mampu.</p>
+        <h3>Susun CV dari pengalaman yang benar-benar kamu miliki</h3>
+        <p>Satu profil untuk banyak CV. Atur posisi tujuan, ringkasan, dan urutan bagian untuk setiap lowongan, lalu ekspor ke PDF atau DOCX.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Tipe CV: Fresh Graduate, Professional, Internship, Career Transition</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Template mudah dibaca, termasuk format satu kolom</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Super AI membantu merapikan kalimat tanpa menambah fakta</li>
+        </ul>
       </div>
     </div>
 
     <div class="feature" data-reveal>
-      <div class="shot"><div class="phone device"><img class="scr" src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/tinjau-perubahan.webp" alt="Layar tinjau perubahan: perbandingan sebelum dan sesudah dengan tombol Tolak dan Terima" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div></div>
+      <div class="shot"><div class="phone device"><img class="scr" src="/img/analisis.webp" alt="Laporan analisis CV per syarat lowongan dengan data contoh fiktif" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div></div>
       <div>
-        <h3>Rekomendasi AI tetap ada pada kendalimu</h3>
-        <p>Setiap rekomendasi ditampilkan dalam perbandingan sebelum dan sesudah. Hanya perubahan yang kamu setujui yang masuk ke CV.</p>
-        <p>Jika ada informasi yang belum lengkap, AI akan bertanya terlebih dahulu, bukan menebak.</p>
+        <h3>Pahami persyaratan lowongan dan buktinya di CV-mu</h3>
+        <p>Tempel deskripsi lowongan. Super AI mengurai syaratnya, kamu meninjau daftarnya, lalu setiap syarat dipetakan ke bukti di CV dengan status yang jelas dan kutipan aslinya.</p>
+        <p>&ldquo;Tidak ditemukan&rdquo; berarti belum tertulis di CV, bukan berarti kamu tidak mampu. Tidak ada skor ATS tunggal atau prediksi peluang diterima.</p>
       </div>
     </div>
 
+    <div class="feature" data-reveal>
+      <div class="shot"><div class="phone device"><img class="scr" src="/img/aktivitas.webp" alt="Riwayat CV dan versi di layar Aktivitas dengan data contoh fiktif" loading="lazy" width="390" height="844"><img class="frame" src="/img/android-frame.svg" alt="" width="342" height="680"></div></div>
+      <div>
+        <h3>Rekomendasi Super AI tetap ada pada kendalimu</h3>
+        <p>Rekomendasi ditampilkan sebagai perbandingan sebelum dan sesudah. Hanya yang kamu setujui yang masuk ke CV, dan versi sebelumnya selalu tersimpan untuk dipulihkan.</p>
+        <p>Jika informasinya belum cukup, Super AI bertanya dulu, bukan menebak.</p>
+      </div>
+    </div>
+    <p class="caption">Tangkapan layar memakai data contoh fiktif.</p>
   </section>
 
-
-  <section id="fitur-lengkap">
-    <div class="fullf" data-reveal>
-    <h2 data-reveal>Fitur Lengkap KERJAREADY</h2>
-    <div class="allf">
-      <div class="grp" data-reveal style="--d:0ms"><span class="grp-no">1</span><h3>Profil Karier &amp; AI CV Builder</h3><ul><li>Satu profil karier terintegrasi untuk menyimpan informasi dan digunakan kembali dalam berbagai CV.</li><li>Pengelolaan data pendidikan, pengalaman kerja, organisasi, proyek, keahlian, dan sertifikasi.</li><li>Pilihan format CV sesuai kebutuhan karier: Fresh Graduate, Professional, Internship, dan Career Transition.</li><li>Tiga pilihan template profesional: ATS Classic, Professional Modern, dan Academic.</li></ul></div>
-      <div class="grp" data-reveal style="--d:110ms"><span class="grp-no">2</span><h3>AI Career Writing Assistant</h3><ul><li>AI Writing Enhancement untuk menyempurnakan deskripsi pengalaman agar lebih profesional, terstruktur, dan relevan.</li><li>AI-generated Professional Summary berdasarkan profil dan pengalaman kandidat.</li><li>AI-guided Questions untuk menggali informasi tambahan ketika data belum lengkap atau kurang jelas.</li><li>Transparansi setiap perubahan melalui perbandingan teks asli dan hasil rekomendasi AI.</li><li>Kendali penuh pengguna untuk menerima, mengedit, atau menolak setiap saran AI.</li></ul></div>
-      <div class="grp" data-reveal style="--d:220ms"><span class="grp-no">3</span><h3>AI CV &amp; Job Description Analyzer</h3><ul><li>Analisis CV langsung dari aplikasi atau melalui unggahan dokumen PDF dan DOCX.</li><li>Input deskripsi lowongan melalui teks maupun file DOCX dan TXT.</li><li>Ekstraksi persyaratan pekerjaan yang dapat ditinjau dan dikoreksi sebelum analisis dilakukan.</li><li>Laporan analisis komprehensif yang mencakup:<ul class="sub"><li><b>Document Quality:</b> Kualitas struktur dan kelengkapan CV.</li><li><b>Job Relevance:</b> Relevansi CV terhadap persyaratan pekerjaan.</li><li><b>Evidence Strength:</b> Kekuatan bukti pengalaman dan keahlian kandidat.</li><li><b>Information Completeness:</b> Kelengkapan informasi penting di CV, termasuk yang belum dicantumkan.</li></ul></li><li>Pemetaan bukti per syarat dengan empat status (bukti jelas, bukti sebagian, tidak ditemukan di CV, belum jelas) beserta kutipan CV-nya.</li><li>Cakupan syarat yang transparan, tanpa skor ATS tunggal atau prediksi peluang diterima.</li><li>Rekomendasi perbaikan berdasarkan informasi dan bukti yang ditemukan dalam CV.</li></ul></div>
-      <div class="grp" data-reveal style="--d:330ms"><span class="grp-no">4</span><h3>CV Management &amp; Document Export</h3><ul><li>Ekspor dokumen CV dalam format PDF dan DOCX.</li><li>Membuat dan mengelola beberapa versi CV untuk kebutuhan posisi dan perusahaan yang berbeda.</li><li>Version History untuk melacak setiap perubahan dan penyempurnaan CV.</li><li>Activity History untuk menyimpan riwayat pembuatan CV, ekspor dokumen, dan analisis lowongan.</li></ul></div>
-    </div>
-    </div>
-  </section>
-
-  <section id="pasang">
-    <h2 data-reveal>Mulai dalam satu menit</h2>
-    <p class="intro" data-reveal style="--d:80ms">Langsung dari browser di HP atau laptop, tanpa install. Aplikasi Android segera hadir.</p>
-    <ol class="steps">
-      <li data-reveal style="--d:0ms"><h3>Klik Masuk / Daftar</h3><p>Tombolnya ada di bagian atas halaman ini.</p></li>
-      <li data-reveal style="--d:110ms"><h3>Pilih akun Google</h3><p>Akun KERJAREADY dibuat otomatis, tanpa kata sandi baru.</p></li>
-      <li data-reveal style="--d:220ms"><h3>Lengkapi profil karier</h3><p>Isi pendidikan, pengalaman, dan skill. Bisa dilanjutkan kapan saja.</p></li>
-      <li data-reveal style="--d:330ms"><h3>Buat dan analisis CV</h3><p>Susun CV profesional, lalu cocokkan dengan lowongan incaranmu.</p></li>
+  <section id="cara-kerja">
+    <h2 data-reveal>Cara kerjanya</h2>
+    <p class="intro" data-reveal style="--d:80ms">Langsung dari browser di HP atau laptop, tanpa install.</p>
+    <ol class="howto">
+      <li data-reveal style="--d:0ms"><h3>Masuk dengan Google</h3><p>Akun dibuat otomatis, tanpa kata sandi baru.</p></li>
+      <li data-reveal style="--d:80ms"><h3>Lengkapi profil karier</h3><p>Isi sendiri atau impor CV lamamu.</p></li>
+      <li data-reveal style="--d:160ms"><h3>Pilih CV dan lowongan</h3><p>Tempel deskripsi pekerjaan yang kamu incar.</p></li>
+      <li data-reveal style="--d:240ms"><h3>Tinjau hasil Super AI</h3><p>Lihat bukti per syarat dan rekomendasinya.</p></li>
+      <li data-reveal style="--d:320ms"><h3>Tentukan langkah berikutnya</h3><p>Perbaiki CV, simpan PDF/DOCX, lalu melamar.</p></li>
     </ol>
     <div class="cta steps-cta" data-reveal>
-      <a class="btn btn-primary" href="/app/">Masuk / Daftar gratis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a class="btn btn-primary" href="/app/">Mulai Kenali Potensimu<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
       <span class="btn btn-soon" role="button" aria-disabled="true" title="Aplikasi Android segera hadir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 17h2"/></svg>Segera di Android</span>
+    </div>
+  </section>
+
+  <section id="kepercayaan">
+    <h2 data-reveal>AI yang membantu, tanpa mengarang perjalananmu.</h2>
+    <div class="trust">
+      <div data-reveal style="--d:0ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Tidak mengarang isi</h3><p>Super AI tidak menambahkan pengalaman, skill, sertifikasi, jabatan, pencapaian, atau angka yang tidak kamu berikan.</p></div>
+      <div data-reveal style="--d:80ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Kamu yang memutuskan</h3><p>Setiap saran bisa kamu periksa, ubah, terima, atau tolak sebelum masuk ke CV.</p></div>
+      <div data-reveal style="--d:160ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Ada dasarnya</h3><p>Setiap temuan analisis disertai kutipan dari CV-mu, jadi bisa kamu cek sendiri.</p></div>
+      <div data-reveal style="--d:240ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Tidak ditemukan bukan berarti tidak mampu</h3><p>Artinya bukti itu belum tertulis di CV yang dianalisis.</p></div>
+      <div data-reveal style="--d:320ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Bukan jaminan diterima</h3><p>Hasil analisis membantu persiapan, bukan pengganti keputusan perekrut.</p></div>
+      <div data-reveal style="--d:400ms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Datamu milikmu</h3><p>Data akun dikunci per pengguna, bisa diunduh, dan bisa dihapus kapan saja. Detail ada di <a href="/privasi">Kebijakan Privasi</a>.</p></div>
     </div>
   </section>
 
   <section id="pembuat">
     <div class="about">
-      <div class="portrait" data-reveal><img src="https://cdn.jsdelivr.net/gh/sabarmann17/kerjaready-beta@e1f7b30767dea6ff96fb59a1b4dedcc922bfd511/img/halozharr.webp" alt="Foto halozharr, pembuat KERJAREADY" loading="lazy" width="513" height="749"></div>
+      <div class="portrait" data-reveal><img src="/img/halozharr.webp" alt="Foto halozharr, pembuat Potensiku" loading="lazy" width="513" height="749"></div>
       <div class="story">
-        <h2>Kenapa KERJAREADY</h2>
-        <p data-reveal style="--d:90ms">Banyak lulusan baru sebenarnya memiliki bekal yang kuat: pengalaman organisasi, magang, dan proyek kampus. Tantangannya ada pada cara menuliskannya di CV, memahami skill yang dicari perusahaan, dan menghadapi sistem ATS. Akibatnya, banyak yang melamar dengan rasa kurang percaya diri.</p>
-        <p data-reveal style="--d:180ms">KERJAREADY hadir untuk membantu persiapan itu. Didukung teknologi AI, kamu bisa menyusun CV yang rapi dari profilmu sendiri, mencocokkannya dengan lowongan incaranmu, dan melihat bagian mana yang sudah kuat serta mana yang perlu ditingkatkan.</p>
-        <p data-reveal style="--d:270ms">KERJAREADY masih dalam tahap beta. Sebagai salah satu dari 10 penguji pertama, masukanmu akan langsung membentuk versi berikutnya.</p>
-        <div class="sign"><b>halozharr</b>Developer dan owner www.kerjain.work</div>
+        <h2>Kenapa Potensiku</h2>
+        <p data-reveal style="--d:90ms">Banyak orang sebenarnya punya bekal yang kuat: pengalaman organisasi, magang, proyek, atau pekerjaan sebelumnya. Yang sering sulit adalah menjelaskannya, memahami apa yang dicari perusahaan, dan menentukan langkah berikutnya.</p>
+        <p data-reveal style="--d:180ms">Potensiku hadir untuk membantu itu. Dengan Super AI, kamu bisa menyusun CV dari pengalamanmu sendiri, mencocokkannya dengan lowongan, dan melihat bagian mana yang sudah kuat serta mana yang perlu dikembangkan.</p>
+        <p data-reveal style="--d:270ms">Potensiku masih dalam tahap beta. Masukanmu akan langsung membentuk versi berikutnya.</p>
+        <div class="sign"><b>halozharr</b>Pembuat Potensiku</div>
       </div>
     </div>
   </section>
@@ -563,54 +640,36 @@ body{overflow-x:clip}
         <p class="intro" data-reveal style="--d:80ms">Masih ada pertanyaan? Hubungi kami di <a href="mailto:halo@kerjain.work">halo@kerjain.work</a>.</p>
       </div>
       <div>
-        <details data-reveal style="--d:0ms">
-          <summary>Perlu install aplikasi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Tidak. KERJAREADY berjalan langsung di browser HP maupun laptop. Kami sarankan Chrome versi terbaru. Aplikasi Android segera hadir.</p>
-        </details>
-        <details data-reveal style="--d:70ms">
-          <summary>Kenapa masuk dengan akun Google?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Supaya daftar dan masuk cukup satu klik, tanpa kata sandi baru. KERJAREADY hanya menerima nama dan alamat email dari akun Google-mu, bukan isi Gmail atau Drive.</p>
-        </details>
-        <details data-reveal style="--d:140ms">
-          <summary>Data CV-ku disimpan di mana?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Akun dan CV disimpan di server Supabase (Singapura), dan hanya kamu yang bisa membacanya. Saat kamu memakai fitur AI, nama, kontak, foto, dan tautanmu tidak ikut dikirim ke AI. Riwayat analisis dan file CV yang kamu simpan berada di browser perangkat yang kamu pakai, jadi akan hilang bila data situs dihapus. Detailnya ada di <a href="/privasi">Kebijakan Privasi</a>.</p>
-        </details>
-        <details data-reveal style="--d:210ms">
-          <summary>Bisa dipakai di iPhone?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Bisa. Buka kerjaready.kerjain.work lewat browser di iPhone, iPad, Android, atau laptop, lalu masuk dengan akun Google.</p>
-        </details>
-        <details data-reveal style="--d:280ms">
-          <summary>Kalau kreditnya habis?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Kredit penguji beta terisi lagi setiap bulan. Semua fitur tanpa AI tetap bisa dipakai, termasuk mengubah CV dan menyimpan PDF.</p>
-        </details>
-        <details data-reveal style="--d:350ms">
-          <summary>Bagaimana cara menghapus akun?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-          <p>Ikuti langkah di halaman <a href="/hapus-akun">Hapus akun</a>, atau kirim email ke halo@kerjain.work.</p>
-        </details>
+        <details data-reveal style="--d:0ms"><summary>Apa itu Potensiku?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Potensiku adalah AI Career Companion yang membantu kamu memahami kemampuan yang kamu miliki dan menyiapkan diri menghadapi peluang kerja. Saat ini fokus pada persiapan melamar: profil karier, CV, impor CV, dan analisis CV terhadap lowongan.</p></details>
+        <details data-reveal style="--d:60ms"><summary>Apa yang dimaksud dengan Super AI?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Super AI adalah teknologi AI inti Potensiku. Ia membaca profil dan CV-mu, menghubungkannya dengan syarat lowongan, lalu menyusun rekomendasi yang bisa kamu tinjau. Penyedia model AI yang kami gunakan disebutkan di <a href="/privasi">Kebijakan Privasi</a>.</p></details>
+        <details data-reveal style="--d:120ms"><summary>Siapa yang bisa memakai Potensiku? Hanya untuk fresh graduate?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Tidak hanya. Mahasiswa tingkat akhir, fresh graduate, pencari kerja, hingga profesional yang ingin pindah atau naik karier bisa memakainya. Tersedia tipe CV Fresh Graduate, Professional, Internship, dan Career Transition.</p></details>
+        <details data-reveal style="--d:180ms"><summary>Apakah Potensiku menjamin saya diterima kerja?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Tidak. Tidak ada aplikasi yang bisa menjamin itu. Potensiku membantu kamu menyiapkan CV yang jelas dan jujur serta memahami kesesuaiannya dengan lowongan. Keputusan tetap ada di perekrut.</p></details>
+        <details data-reveal style="--d:240ms"><summary>Apakah AI akan menambahkan pengalaman yang tidak saya miliki?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Tidak. Super AI hanya memakai informasi yang kamu berikan. Saran yang memuat hal di luar datamu dibuang sebelum ditampilkan, dan setiap perubahan harus kamu setujui.</p></details>
+        <details data-reveal style="--d:300ms"><summary>Bagaimana Potensiku menggunakan dan melindungi data saya?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Akun dan CV disimpan di server Supabase (Singapura) dan hanya bisa dibaca oleh pemilik akun. Saat memakai fitur AI untuk CV dari aplikasi, nama, kontak, foto, dan tautanmu tidak ikut dikirim. Riwayat analisis dan file CV yang kamu simpan berada di browser perangkatmu. Detailnya ada di <a href="/privasi">Kebijakan Privasi</a>.</p></details>
+        <details data-reveal style="--d:360ms"><summary>Gratis atau berbayar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Pengguna baru mendapat trial gratis 12 kredit AI sekali pakai, cukup untuk satu alur lengkap. Fitur tanpa AI, seperti menyusun CV dan menyimpan PDF, tetap bisa dipakai. Paket berbayar akan diumumkan saat peluncuran.</p></details>
+        <details data-reveal style="--d:420ms"><summary>Perlu install aplikasi? Bisa di iPhone?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Tidak perlu install. Potensiku berjalan di browser HP (Android maupun iPhone) dan laptop. Aplikasi Android segera hadir.</p></details>
+        <details data-reveal style="--d:480ms"><summary>Bagaimana cara menghapus akun?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Ikuti langkah di halaman <a href="/hapus-akun">Hapus akun</a>, atau kirim email ke halo@kerjain.work.</p></details>
       </div>
     </div>
   </section>
 
   <div class="final" data-reveal>
-    <h2>Coba sekarang<br>dan berikan feedback</h2>
-    <p class="intro" data-reveal style="--d:80ms">Masukanmu sangat berarti.</p>
+    <h2>Perjalanan kariermu punya banyak kemungkinan.</h2>
+    <p class="intro" data-reveal style="--d:80ms">Mulai pahami potensimu hari ini.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="/app/">
-        Masuk / Daftar gratis
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
-      </a>
-      <a class="btn btn-ghost" href="mailto:halo@kerjain.work?subject=Masukan%20KERJAREADY%20beta">Kirim masukan</a>
+      <a class="btn btn-primary" href="/app/">Mulai Bersama Potensiku<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="mailto:halo@kerjain.work?subject=Masukan%20Potensiku%20beta">Kirim masukan</a>
     </div>
   </div>
   </main>
 
   <footer>
-    <span class="mark">KERJAREADY</span>
+    <span class="mark"><i aria-hidden="true">P</i>Potensiku</span>
     <a href="/privasi">Kebijakan Privasi</a>
     <a href="/ketentuan">Ketentuan Layanan</a>
     <a href="/hapus-akun">Hapus akun</a>
     <a href="mailto:halo@kerjain.work">halo@kerjain.work</a>
-    <span>© 2026 kerjain.work</span>
+    <span>© 2026 Potensiku · Powered by Super AI</span>
   </footer>
 </div>
 <script src="/js/app.js" defer></script>
