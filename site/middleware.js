@@ -6,7 +6,7 @@ export const config = { matcher: '/:path*' };
 export default function middleware(request) {
   const url = new URL(request.url);
   if (url.hostname !== 'admin.potensiku.work') return;
-  const path = url.pathname === '/' ? '/index.html' : url.pathname;
+  const path = url.pathname === '/' || url.pathname === '/index.html' ? '' : url.pathname;
   if (path.includes('..')) return new Response('Not found', { status: 404 });
   const dest = new URL(`/admin${path}${url.search}`, url);
   return new Response(null, { headers: { 'x-middleware-rewrite': dest.toString() } });
