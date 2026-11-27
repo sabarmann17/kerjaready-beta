@@ -35062,16 +35062,16 @@ break A}if("trial_ended"===a){s=B.we
 break A}if("subscribed"===a){s=B.pM
 break A}s=B.l0
 break A}return s},
-b8Z(a){var s,r,q,p,o,n,m="beta_seq",l=new A.ahb(),k=new A.aha(),j=a.h(0,"features"),i=a.h(0,"plan"),h=a.h(0,"reason"),g=typeof i=="string"?i:"none",f=a.an("status")?A.bzU(a.h(0,"status")):B.pM,e=l.$2(a.h(0,"used"),0),d=l.$2(a.h(0,"limit"),0),c=J.c(a.h(0,"period"),"month"),b=J.c(a.h(0,"period"),"once")
-if(t.j.b(j)){s=A.ax(t.N)
-for(r=J.aL(j);r.p();){q=r.gK()
+b8Z(a){var s,r,q,p,o,n="beta_seq",m=new A.ahb(),l=new A.aha(),k=a.h(0,"features"),j=a.h(0,"plan"),i=a.h(0,"reason"),h=typeof j=="string"?j:"none",g=a.an("status")?A.bzU(a.h(0,"status")):B.pM,f=m.$2(a.h(0,"used"),0),e=m.$2(a.h(0,"limit"),0),d=J.c(a.h(0,"period"),"month"),c=J.c(a.h(0,"period"),"once")
+if(t.j.b(k)){s=A.ax(t.N)
+for(r=J.aL(k);r.p();){q=r.gK()
 if(typeof q=="string")s.D(0,q)}}else s=B.b0o
-k.$1(a.h(0,"resets_at"))
-r=l.$2(a.h(0,"topup_balance"),0)
-p=A.fb(a.h(0,m))?A.bd(a.h(0,m)):null
-o=l.$2(a.h(0,"beta_slots"),10)
-n=k.$1(a.h(0,"trial_ends_at"))
-return new A.mg(g,f,e,d,c,b,s,r,p,o,n,typeof h=="string"?h:null)},
+l.$1(a.h(0,"resets_at"))
+r=m.$2(a.h(0,"topup_balance"),0)
+p=A.fb(a.h(0,n))?A.bd(a.h(0,n)):null
+m.$2(a.h(0,"beta_slots"),10)
+o=l.$1(a.h(0,"trial_ends_at"))
+return new A.mg(h,g,f,e,d,c,s,r,p,o,typeof i=="string"?i:null)},
 mh:function mh(a,b,c,d,e,f){var _=this
 _.a=a
 _.b=b
@@ -35084,7 +35084,7 @@ b0k:function b0k(a){this.a=a},
 b0l:function b0l(){},
 v8:function v8(a,b){this.a=a
 this.b=b},
-mg:function mg(a,b,c,d,e,f,g,h,i,j,k,l){var _=this
+mg:function mg(a,b,c,d,e,f,g,h,i,j,k){var _=this
 _.a=a
 _.b=b
 _.c=c
@@ -35094,14 +35094,13 @@ _.f=f
 _.r=g
 _.x=h
 _.y=i
-_.z=j
-_.Q=k
-_.as=l},
+_.Q=j
+_.as=k},
 ahb:function ahb(){},
 aha:function aha(){},
 bho(a,b){var s,r,q="Trial gratis \xb7 sisa "
 switch(a.b.a){case 1:s=a.y
-s="Tester beta ke-"+A.i(s==null?"-":s)+" dari "+a.z
+s="Tester beta #"+A.i(s==null?"-":s)
 break
 case 2:s=a.f?q+(a.gyG()+a.x)+" kredit":q+a.aX7(b)+" hari"
 break
@@ -128955,7 +128954,7 @@ $S:0}
 A.Dw.prototype={
 hV(a,b){var s,r,q,p,o,n,m=null,l=b.c6($.me(),t.wb).gq(),k=l==null,j=k?m:l.a,i=(k?m:l.b)===B.l1
 k=i?B.a0y:B.ev
-s=i?"Kamu termasuk 10 tester beta pertama: semua fitur gratis selama beta. Paket di bawah berlaku setelah beta.":"Pengguna baru mendapat trial gratis 12 kredit sekali pakai, sekali per akun dan per perangkat. Pembelian paket dibuka setelah masa beta."
+s=i?"Kamu termasuk tester beta awal Potensiku: kuota beta berlaku selama masa beta. Paket di bawah berlaku setelah beta.":"Pengguna baru mendapat trial gratis 12 kredit sekali pakai, sekali per akun dan per perangkat. Pembelian paket dibuka setelah masa beta."
 r=t.p
 k=A.b([B.b_m,B.ce,B.Sz,B.bH,new A.dV(s,k,m),B.fZ,B.bgW],r)
 for(q=0;q<3;++q){p=B.ty[q]
