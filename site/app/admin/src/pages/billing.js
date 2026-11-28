@@ -78,7 +78,7 @@ export async function billingPage(ctx) {
       kpi('Refund / gagal', num(d.problem), d.problem ? 'perlu dicek' : 'aman', d.problem ? 'red' : 'muted')),
     h('div', { class: 'filters' },
       h('label', { class: 'search' }, icon('search', 16), search),
-      select([['', 'Status: Semua'], ['lunas', 'Lunas'], ['menunggu', 'Menunggu'], ['gagal', 'Gagal'], ['refund', 'Refund']], state.status, setF('status'), 'Filter status')),
+      select([['', 'Status: Semua'], ['lunas', 'Lunas'], ['menunggu', 'Menunggu'], ['gagal', 'Gagal'], ['kedaluwarsa', 'Kedaluwarsa'], ['refund', 'Refund']], state.status, setF('status'), 'Filter status')),
     body);
   render(d);
 }

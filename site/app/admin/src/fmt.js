@@ -44,6 +44,7 @@ export const FEATURES = {
   apply_recommendations: 'Terapkan rekomendasi ke CV',
   import_cv: 'Impor CV lama',
   refund: 'Kredit dikembalikan (gagal)',
+  topup: 'Top-up kredit dibeli',
 };
 export const feature = (f) => FEATURES[f] || f;
 

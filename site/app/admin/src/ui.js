@@ -31,5 +31,5 @@ export const PLAN_TONE = { Trial: 'gray', 'Trial selesai': 'gray', 'Belum klaim'
 export const STATUS_TONE = { Aktif: 'green', Nonaktif: 'red', 'Belum aktif': 'amber' };
 export const TICKET_TONE = { baru: 'red', diproses: 'amber', selesai: 'green' };
 export const TICKET_LABEL = { baru: 'Baru', diproses: 'Diproses', selesai: 'Selesai' };
-export const INVOICE_TONE = { lunas: 'green', menunggu: 'amber', gagal: 'red', refund: 'gray' };
-export const INVOICE_LABEL = { lunas: 'Lunas', menunggu: 'Menunggu', gagal: 'Gagal', refund: 'Refund' };
+export const INVOICE_TONE = { lunas: 'green', menunggu: 'amber', gagal: 'red', kedaluwarsa: 'gray', refund: 'gray' };
+export const INVOICE_LABEL = { lunas: 'Lunas', menunggu: 'Menunggu', gagal: 'Gagal', kedaluwarsa: 'Kedaluwarsa', refund: 'Refund' };
