@@ -134027,11 +134027,11 @@ o.push(A.wj(A.aX(6),A.aw8(B.aJ,p,7,g.gahU()),B.bV))
 o.push(B.al)
 if(q)if(l)g="Kredit trial habis. Lihat paket untuk melanjutkan."
 else{d=g.e?i:h
-g=g.e?"awal bulan depan":"besok pukul 00.00 WIB"
+g=g.e?"di periode berikutnya (mengikuti tanggal pembelian)":"besok pukul 00.00 WIB"
 g="Kredit "+d+" habis. Terisi lagi "+g+"."}else{d=g.gzu()
 r=r>0?" + "+r+" top-up":""
 if(l)g=" \u2022 sekali pakai, tidak terisi ulang"
-else{m=" \u2022 terisi ulang "+(g.e?"tiap awal bulan":"setiap 00.00 WIB")
+else{m=" \u2022 terisi ulang "+(g.e?"tiap bulan, mengikuti tanggal pembelian":"setiap 00.00 WIB")
 g=m}g="Sisa "+d+" kredit"+r+g}d=q?B.md:B.ak
 o.push(A.K(g,j,j,j,j,A.cZ(j,j,d,j,j,j,j,j,j,j,j,10,j,j,q?B.aU:B.bf,j,j,!0,j,j,j,j,j,j,j,j),j,j,j))
 if(this.d)B.l.G(o,A.b([B.aM,new A.du(B.e7,j,j,q?A.Cg(B.kp,B.Tt,B.beq,new A.aQL(a),j):A.dg(B.q0,B.bio,j,j,new A.aQM(a),j,j),j)],n))
